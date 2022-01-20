@@ -16,7 +16,7 @@ module.exports = {
     if (!token) {
       return req;
     }
-   // Make sure the secret is properly encoded in both tokens
+   // Make sure the secret is properly encoded in both tokens and store the jwt data on req.user, then((...) => {request object is returned below is returned below!})
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
@@ -24,9 +24,9 @@ module.exports = {
       console.log('Invalid token');
     }
    // Send request object back to context
-    return req;
+    return req
   },
-
+   // Instantiate a fresh token for a new user
   signToken: function ({ email, username, _id }) {
     const payload = { email, username, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });

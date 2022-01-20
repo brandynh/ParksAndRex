@@ -14,7 +14,7 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
 });
-// All route communication transfers to and through Apollo first, at the middle of the stack
+// All route communication transfers to and through Apollo each direction, (at the "middle" of the stack)
 server.applyMiddleware({ app });
 
 // Provide middleware to express server
