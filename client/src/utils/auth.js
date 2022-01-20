@@ -2,6 +2,7 @@ import decode from 'jwt-decode';
 
 class AuthService {
   getProfile() {
+   //   Grab json token from web storage and reverse the encoded hash
     return decode(this.getToken());
   }
 
@@ -12,9 +13,9 @@ class AuthService {
   }
 
   isTokenExpired(token) {
-    // Decode the token to get its expiration time that was set by the server
+    // Decode the token to get its expiration time, set by server-side auth
     const decoded = decode(token);
-    // If the expiration time is less than the current time (in seconds), the token is expired and we return `true`
+    // If the expiration time is less than the current time (in seconds), the token is expired and we return `true`, removing the expired hash from local storage
     if (decoded.exp < Date.now() / 1000) {
       localStorage.removeItem('id_token');
       return true;
@@ -31,7 +32,7 @@ class AuthService {
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
   }
-
+   // Terminate session by eliminating the saved token  ... FATALITY
   logout() {
     localStorage.removeItem('id_token');
     window.location.reload();

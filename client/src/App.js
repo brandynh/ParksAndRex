@@ -10,6 +10,10 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
+//
+   // COMPONENT IMPORTS HERE
+// 
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -20,7 +24,7 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
-  // return the headers to the context so httpLink can read them
+  // return the headers to the context so httpLink has access to them
   return {
     headers: {
       ...headers,
@@ -40,9 +44,11 @@ function App() {
   return (
    <ApolloProvider client={client}>
    <Router>
-     <div className="flex-column justify-flex-start min-100-vh">
-         
-     </div>
+      <Route>
+
+
+
+      </Route>
    </Router>
  </ApolloProvider>
   );

@@ -14,7 +14,7 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
 });
-// All route communication moves through Apollo
+// All route communication transfers to and through Apollo first, at the middle of the stack
 server.applyMiddleware({ app });
 
 // Provide middleware to express server
@@ -30,7 +30,6 @@ if (process.env.NODE_ENV === 'production') {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
-
 
 // We open the database to a live express server listening at PORT
 db.once('open', () => {
