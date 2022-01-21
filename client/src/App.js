@@ -1,34 +1,42 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //
-   // COMPONENT IMPORTS HERE
-// 
-
+// COMPONENT IMPORTS BELOW
+//
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Checkout from "./pages/Checkout";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Shop from "./pages/Shop";
+import Signup from "./pages/Signup";
+import Thanks from "./pages/Thanks";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink has access to them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -39,18 +47,28 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 function App() {
   return (
-   <ApolloProvider client={client}>
-   <Router>
-      <Route>
+    <ApolloProvider client={client}>
+      <Router>
+        <>
+          <Header />
 
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/thanks" component={Thanks} />
+          </Switch>
 
-
-      </Route>
-   </Router>
- </ApolloProvider>
+          <Footer />
+        </>
+      </Router>
+    </ApolloProvider>
   );
 }
 
