@@ -1,29 +1,53 @@
 const db = require('./connection');
 const {
    User,
-   Category
+   Category,
+   Package
 } = require('../models');
 
 db.once('open', async () => {
-   await Category.deleteMany();
+   // await Category.deleteMany();
 
-   await Category.insertMany([{
-         name: 'Gift Shop'
+   // await Category.insertMany([{
+   //       name: 'Gift Shop'
+   //    },
+   //    {
+   //       name: 'Expeditions'
+   //    },
+   //    {
+   //       name: 'Sprints'
+   //    },
+   //    {
+   //       name: 'Membership'
+   //    },
+   //    {
+   //       name: 'Rewards'
+   //    }
+   // ]);
+   // console.log('categories seeded')
+
+   await Package.deleteMany();
+
+   const package = await Package.insertMany([
+      {
+         name: 'Velociraptor Package',
+         description: 'For those wanting',
+         image: '',
+         price: '20,000',
       },
       {
-         name: 'Expeditions'
+         name: 'T-Rex Package',
+         description: '',
+         image:'',
+         price: '50,000',  
       },
       {
-         name: 'Sprints'
-      },
-      {
-         name: 'Membership'
-      },
-      {
-         name: 'Rewards'
+         name: 'Brontosaurus Package',
+         description: '',
+         image: '',
+         price: '100,000'
       }
    ]);
-   console.log('categories seeded')
 
    await User.deleteMany();
 
