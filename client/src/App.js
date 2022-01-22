@@ -7,8 +7,11 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 //
 // COMPONENT IMPORTS BELOW
 //
@@ -50,24 +53,22 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <BrowserRouter>
         <>
           <Header />
-
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/checkout" component={Checkout} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/thanks" component={Thanks} />
-          </Switch>
-
+          <Routes>
+            <Route  path="/" element={<Home />} />
+            <Route  path="/shop" element={< Shop / >} />
+            <Route  path="/login" element={ < Login / >} />
+            <Route  path="/signup" element={ < Signup / >} />
+            <Route  path="/about" element={ <About / > } />
+            <Route  path="/checkout" element={ < Checkout / > } />
+            <Route  path="/contact" element ={ <Contact / > } />
+            <Route  path="/thanks" element={ <Thanks / > } />
+            </Routes>
           <Footer />
         </>
-      </Router>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }

@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server/config && node seeds.js"
+    "seed": "cd server/config && node seeds.js",
+    "start": "react-scripts start",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
   },
   "repository": {
     "type": "git",
@@ -35,5 +37,8 @@
   "homepage": "https://github.com/brandynh/Project3#readme",
   "devDependencies": {
     "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "graphql": "15.8.0"
   }
 }
