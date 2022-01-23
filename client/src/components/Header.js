@@ -4,7 +4,7 @@ import dinosaurImg from "../assets/images/j-park-dino.jpg";
 
 const Header = () => {
   return (
-    <Navbar expand="false" className="justify-content-center">
+    <Navbar expand="false" className="justify-content-center navbar">
       <Navbar.Toggle aria-controls="basic-navbar-nav">
         <Navbar.Brand>
         <img className="img-fluid" src={dinosaurImg} alt="dinosaurs"/>
