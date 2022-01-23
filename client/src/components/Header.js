@@ -1,13 +1,13 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import dinosaurImg from "../assets/images/j-park.jpeg"; 
+import dinosaurImg from "../assets/images/j-park-dino.jpg"; 
 
 const Header = () => {
   return (
     <Navbar expand="false" className="justify-content-center">
       <Navbar.Toggle aria-controls="basic-navbar-nav">
         <Navbar.Brand>
-        <img src={dinosaurImg} alt="dinosaurs"/>
+        <img className="img-fluid" src={dinosaurImg} alt="dinosaurs"/>
         </Navbar.Brand>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">

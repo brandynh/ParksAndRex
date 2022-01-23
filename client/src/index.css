@@ -20,7 +20,6 @@ Link {
 }
 
 
-
 .container {
   max-width: unset;
 }
@@ -28,4 +27,11 @@ Link {
 .page-footer {
   position: sticky;
   top: 100vh;
+}
+
+.jumbotron {
+background-image: url('../src/assets/images/dino-background-public.jpeg');
+background-size: cover;
+width:100%;
+height: 100vh;
 }

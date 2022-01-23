@@ -1,11 +1,25 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  return <div>
-    <h1>HI THIS IS THE HOME PAGE</h1>
-{/* Landing page, splashy and attention-grabbing */}
-
-  </div>;
+  return (
+    <div className="jumbotron">
+      <div className="container">
+        <h1>Life, Uh, Finds a Way</h1>
+        <p>
+          Welcome to the world's premier dinosaur adventure safari theme park.
+        </p>
+        <div className="row">
+          <Link to="/about">
+            <button>Learn More</button>
+          </Link>
+          <Link to="/shop">
+            <button>Book Your Visit Now</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
