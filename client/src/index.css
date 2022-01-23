@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body, #root { height: 100%; }
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -14,4 +17,15 @@ code {
 
 Link {
   text-decoration: none;
+}
+
+
+
+.container {
+  max-width: unset;
+}
+
+.page-footer {
+  position: sticky;
+  top: 100vh;
 }

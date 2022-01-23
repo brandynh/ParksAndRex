@@ -52,6 +52,8 @@ function App() {
       <BrowserRouter>
         <>
           <Header />
+          <div className="background">
+          <main className="h-100 d-flex justify-content-center align-items-center">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/shop" element={<Shop />} />
@@ -62,6 +64,8 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/thanks" element={<Thanks />} />
           </Routes>
+          </main>
+          </div>
           <Footer />
         </>
       </BrowserRouter>
