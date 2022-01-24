@@ -1,3 +1,16 @@
+:root {
+  --light-blue: #b5d7fc;
+  --dark-bruise: #7f5667;
+  --light-bruise: #A58894;
+  --dino-yellow: #bf9b4a;
+  --dino-grey: #cecdcb; 
+  --dino-dark-grey: #cecdcb;
+  --purple: #7a49a5;
+  --dark-blue: 	#4974a5;
+  --pink: #FCB5D7;
+  --light-green: #D7FCB5
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +20,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body, #root { height: 100%; }
+
+main, body {
+  background-color: var(--light-blue);
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -14,4 +34,24 @@ code {
 
 Link {
   text-decoration: none;
+}
+
+.navbar {
+  background: var(--dark-blue)
+}
+
+.container {
+  max-width: unset;
+}
+
+.page-footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.jumbotron {
+background-image: url('../src/assets/images/dino-background-public.jpeg');
+background-size: cover;
+width:100%;
+height: 100vh;
 }

@@ -1,11 +1,23 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-  return <div>
-
-      {/* footer would appear on every page—could just contain a copyright unless we have some other ideas
- */}
-  </div>;
+  return (
+      <footer className="page-footer font-small special-color-dark pt-4">
+        <div className="container">
+          <ul className="list-unstyled list-inline text-center">
+            <li className="list-inline-item">
+              <a
+                href="https://github.com/brandynh/Project3"
+                target="_blank"
+                className="btn-floating mx-1"
+              >
+                <i>© Built By The Darkside Dino Boiz</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+  );
 };
 
 export default Footer;
