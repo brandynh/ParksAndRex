@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "graphql": "15.8.0",
-    "react-bootstrap": "^2.1.1"
+    "react-bootstrap": "^2.1.1",
+    "@apollo/react-hooks": "^4.0.0"
   }
 }
