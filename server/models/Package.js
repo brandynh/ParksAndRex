@@ -23,11 +23,6 @@ const packageSchema = new Schema({
     required: true,
     min: 0.99
   },
-  // category: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Category',
-  //   required: true
-  // }
 });
 
 const Package = mongoose.model('Package', packageSchema);
