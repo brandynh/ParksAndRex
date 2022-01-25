@@ -6,12 +6,12 @@ import { ADD_USER } from '../utils/mutations';
 
 const Signup = () => {
 
-const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
   const [addUser, { error }] = useMutation(ADD_USER); 
-
+   console.log(userFormData)
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -22,9 +22,11 @@ const [userFormData, setUserFormData] = useState({ username: '', email: '', pass
 
     try {
       const { data } = await addUser({
-        variables: {...userFormData}
+        variables: {
+           ...userFormData
+        }
       });
-
+      console.log(data)
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
@@ -32,6 +34,8 @@ const [userFormData, setUserFormData] = useState({ username: '', email: '', pass
     }
 
     setUserFormData({
+      firstName: '',
+      lastName: '',
       username: '',
       email: '',
       password: '',
@@ -58,6 +62,30 @@ const [userFormData, setUserFormData] = useState({ username: '', email: '', pass
             required
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='firstName'>First name</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your first name'
+            name='firstName'
+            onChange={handleInputChange}
+            value={userFormData.firstName}
+          />
+          <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='lastName'>Last name</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your last name'
+            name='lastName'
+            onChange={handleInputChange}
+            value={userFormData.lastName}
+          />
+          <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
