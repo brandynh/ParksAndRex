@@ -18,7 +18,6 @@ const Shop = () => {
           imgLink={dinoTestImg}
           description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
           cost="$55,000"
-      /* package props in here */
       />
 
       <Package
@@ -26,7 +25,6 @@ const Shop = () => {
           imgLink={dinoPark}
           description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
           cost="$1 million"
-      /* package props in here, etc. */
       />
 
       <Package
@@ -34,7 +32,6 @@ const Shop = () => {
           imgLink={dinoPark2}
           description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
           cost="$350,000"
-      /* package props in here, etc. */
       />
       </div>
     </div>

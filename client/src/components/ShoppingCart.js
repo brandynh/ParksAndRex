@@ -6,12 +6,7 @@ const ShoppingCart = () => {
 
       {/* Card component that will populate with selected Packages on checkout page
       so that user can see what they're buying. */}
-
-      <Package 
       
-      /* props will go in here */
-      
-      />
 
 
   </div>;
