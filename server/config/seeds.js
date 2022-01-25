@@ -44,7 +44,7 @@ db.once('open', async () => {
       },
       {
          name: 'Brontosaurus Package',
-         description: '',
+         description: 'The ultimate experience. With the Brontosaurus package, nothing in Parks and Rex will be out of your reach',
          image: '',
          price: '100,000'
       }

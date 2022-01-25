@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+const perkSchema = require('./Perk');
+
 const packageSchema = new Schema({
   name: {
     type: String,
@@ -11,9 +13,8 @@ const packageSchema = new Schema({
   description: {
     type: String
   },
-  perks: {
-    type: String
-  },
+  perks: [perkSchema],
+
   image: {
     type: String
   },

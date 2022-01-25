@@ -6,6 +6,22 @@ const typeDefs = gql`
     name: String
   }
 
+  type Perk {
+  _id: ID
+  name: String
+  description: String
+  quantity: Int
+  }
+
+  type Package {
+  _id: ID
+  name: String
+  description: String
+  perks: [Perk]
+  image: String
+  price: Float
+  }
+
   type Product {
     _id: ID
     name: String
