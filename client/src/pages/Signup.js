@@ -11,7 +11,7 @@ const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', 
   const [showAlert, setShowAlert] = useState(false);
 
   const [addUser, { error }] = useMutation(ADD_USER); 
-
+   console.log(userFormData)
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -23,12 +23,10 @@ const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', 
     try {
       const { data } = await addUser({
         variables: {
-           username: userFormData.username,
-           email: userFormData.email,
-           password: userFormData.password
+           ...userFormData
         }
       });
-
+      console.log(data)
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
