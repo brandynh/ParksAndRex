@@ -11,6 +11,9 @@ const packageSchema = new Schema({
   description: {
     type: String
   },
+  perks: {
+    type: String
+  },
   image: {
     type: String
   },

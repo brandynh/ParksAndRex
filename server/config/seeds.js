@@ -31,13 +31,14 @@ db.once('open', async () => {
    const package = await Package.insertMany([
       {
          name: 'Velociraptor Package',
-         description: 'For those wanting',
+         description: 'For those wanting to experience the foundation of what makes Parks and Rex the premier safari adventure on Earth!',
+         perks: '',
          image: '',
          price: '20,000',
       },
       {
          name: 'T-Rex Package',
-         description: '',
+         description: 'If you really want to sink your teeth into everything that Parks and Rex has to offer, the T-Rex package has you covered.',
          image:'',
          price: '50,000',  
       },
