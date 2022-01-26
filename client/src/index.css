@@ -36,8 +36,20 @@ Link {
   text-decoration: none;
 }
 
+
+
+.logo {
+  border:none;
+}
+
 .navbar {
   background: var(--dark-blue)
+}
+
+.logo:focus {
+  border:none;
+  outline:none;
+  box-shadow:none
 }
 
 .container {
