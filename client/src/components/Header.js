@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import dinosaurImg from "../assets/images/j-park-dino.jpg"; 
+import dinosaurImg from "../assets/images/Dinologo1.png"; 
 
 const Header = () => {
   return (
