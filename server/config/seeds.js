@@ -2,7 +2,8 @@ const db = require('./connection');
 const {
    User,
    Category,
-   Package
+   Package,
+   Perk
 } = require('../models');
 
 db.once('open', async () => {
@@ -25,6 +26,29 @@ db.once('open', async () => {
    //    }
    // ]);
    // console.log('categories seeded')
+
+   await Perk.deleteMany();
+
+   const perk = await Perk.insertMany([
+      {
+         description: 'General admission to the park for one full day. Includes access to the herbivore garden, raptor pen, and Psittacosaurus petting zoo (signed waiver required)'
+      },
+      {
+         description: 'Tickets to the T-Rex feeding show (T-Rex sighting not guaranteed)'
+      },
+      {
+         description: 'Guided Jeep tour inside of the Stegosauraus grazing grounds'
+      },
+      {
+         description: 'Tour of the dinosaur egg hatching facility (no cameras allowed)'
+      },
+      {
+         description: 'Submarine tour of the aquatic dinosaur pool'
+      },
+      {
+         description: 'Hang-Gliding with the Pterodactyls!'
+      }
+   ]);
 
    await Package.deleteMany();
 

@@ -1,4 +1,6 @@
-const { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 const perkSchema = new Schema({
     description: {
@@ -7,4 +9,6 @@ const perkSchema = new Schema({
     }
 });
 
-module.exports = perkSchema;
+const Perk = mongoose.model('Perk', perkSchema);
+
+module.exports = Perk;
