@@ -29,7 +29,7 @@ db.once('open', async () => {
 
    await Perk.deleteMany();
 
-   const Perk = await Perk.insertMany([
+   const perk = await Perk.insertMany([
       {
          description: 'General admission to the park for one full day. Includes access to the herbivore garden, raptor pen, and Psittacosaurus petting zoo (signed waiver required)'
       },
