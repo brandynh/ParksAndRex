@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import dinosaurImg from "../assets/images/Dinologo1.png"; 
-
+import Auth from "../utils/auth"
 
 
 const Header = () => {
