@@ -1,5 +1,5 @@
 import React from 'react';
-import Package from './Package'
+// import Package from './Package'
 
 const ShoppingCart = () => {
   return <div>
