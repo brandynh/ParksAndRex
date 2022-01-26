@@ -76,7 +76,7 @@ const Login = (props) => {
      variant='success'>
      Submit
    </Button>
-   {error.message && <div>Sign in failed</div>}
+   {error && <div>Sign in failed</div>}
  </Form>
   );
 };
