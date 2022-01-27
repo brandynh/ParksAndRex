@@ -1,3 +1,8 @@
+/* Google fonts below */
+/* font-family: 'Bangers', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Sora', sans-serif; */
+
 :root {
   --light-blue: #b5d7fc;
   --dark-bruise: #7f5667;
@@ -10,6 +15,19 @@
   --pink: #FCB5D7;
   --light-green: #D7FCB5
 }
+
+h1{
+  font-family: Bangers;
+  color: var(--purple);
+  font-size: 75px;
+}
+
+p {
+  font-family: Sora;
+  color: var(--black)
+}
+
+
 
 body {
   margin: 0;
