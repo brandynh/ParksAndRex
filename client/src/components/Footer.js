@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-      <footer className="page-footer font-small special-color-dark pt-4">
+      <footer className="page-footer font-small special-color-dark pt-5">
         <div className="container">
           <ul className="list-unstyled list-inline text-center">
             <li className="list-inline-item">

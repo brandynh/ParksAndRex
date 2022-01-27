@@ -74,7 +74,7 @@ const Login = (props) => {
      disabled={!(userFormData.username && userFormData.password)}
      type='submit'
      variant='success'>
-     Submit
+      Submit
    </Button>
    {error && <div>Sign in failed</div>}
  </Form>

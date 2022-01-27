@@ -1,0 +1,20 @@
+
+ #glowBox {
+   animation: Glow 3s ease-in-out infinite alternate;
+   border-radius: 8%;
+ }
+ #mainImg {
+    height: 150px;
+ }
+ 
+ /*glow*/
+ @keyframes Glow {
+   from {
+     box-shadow: 0 0 5px var(--dark-blue), 0 0 10px var(--dark-blue), 0 0 25px var(--dark-blue), 0 0 40px var(--dark-blue),
+       0 0 60px var(--light-blue), 0 0 80px var(--light-blue), 0 0 100px var(--light-blue), 0 0 125px var(--light-blue);
+   }
+   to {
+     box-shadow: 0 0 5px var(--dark-blue), 0 0 10px var(--dark-blue), 0 0 15px var(--dark-blue), 0 0 20px var(--dark-blue),
+       0 0 35px var(--light-blue), 0 0 40px var(--light-blue), 0 0 50px var(--light-blue), 0 0 75px var(--light-blue);
+   }
+ }

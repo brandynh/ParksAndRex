@@ -11,7 +11,7 @@ font-family: 'Sora', sans-serif; */
   --dino-grey: #cecdcb; 
   --dino-dark-grey: #cecdcb;
   --purple: #7a49a5;
-  --dark-blue: 	#4974a5;
+  --dark-blue: #4974a5;
   --pink: #FCB5D7;
   --light-green: #D7FCB5
 }
@@ -44,7 +44,8 @@ h1{
 
 p {
   font-family: Sora;
-  color: var(--black)
+  color: var(--black);
+  font-size: x-large;
 }
 
 button {
@@ -52,7 +53,6 @@ button {
   color: var(--dino-grey);
   font-family: Bangers;
   font-size: 25px;
-  margin: 10px;
 }
 
 button:hover {
@@ -64,6 +64,9 @@ Link {
   text-decoration: none;
 }
 
+Nav {
+   margin-top: 75px;
+}
 .logo {
   border:none;
 }
@@ -79,6 +82,8 @@ Link {
 
 .navbar {
   background: var(--dark-blue);
+  padding: 50px 0px 50px 0px;
+  height: 140px;
 }
 
 .logo:focus {
