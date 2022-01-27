@@ -6,12 +6,12 @@ const stripe = require('stripe')('sk_test_51KLbiADzqI05yRaXswNjugRVLmveyxn6iUB5m
 const resolvers = {
   Query: {
 
-    packages: async (parent, args, context) => {
-      if (context.user) {
+    packages: async (parent, args) => {
+      
         const packages = await Package.find({});
 
         return packages;
-      }
+    
     },
     
     user: async (parent, args, context) => {

@@ -10,7 +10,7 @@ db.once('open', async () => {
 
    await Perk.deleteMany();
 
-   await Perk.insertMany([
+   const perks = await Perk.insertMany([
       {
          description: 'General admission to the park for one full day. Includes access to the herbivore garden, raptor pen, and Psittacosaurus petting zoo (signed waiver required)'
       },
@@ -37,7 +37,7 @@ db.once('open', async () => {
       {
          name: 'Velociraptor Package',
          description: 'For those wanting to experience the foundation of what makes Parks and Rex the premier safari adventure on Earth!',
-         perks: [],
+         perks: perks[0],
          image: '',
          price: '20000',
       },
