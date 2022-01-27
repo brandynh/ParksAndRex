@@ -21,6 +21,7 @@ import Signup from "./pages/Signup";
 import Thanks from "./pages/Thanks";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { StoreProvider } from "./utils/GlobalState";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -50,6 +51,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
+      <StoreProvider>
         <>
           <Header />
           <div className="background">
@@ -68,6 +70,7 @@ function App() {
           </div>
           <Footer />
         </>
+        </StoreProvider>
       </BrowserRouter>
     </ApolloProvider>
   );
