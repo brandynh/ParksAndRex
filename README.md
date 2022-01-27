@@ -1,17 +1,105 @@
-# Project3
+#   😃 PARKS & REX 😃
 
-Branch Test
+### SUMMARY  
+> **TAGLINE**
+
+## *DESCRIPTION* 
+
+> 
+> 
+>>  
+>> 
+
+## *Table of Contents*
+### (*Internal navigation links*)
+- 
+- 
+- 
+- 
+- 
+ 
+  
+> #### **Key Terms:**  
+> ##### (*External navigation links*)
+>> - 
+>> - 
+>> - 
+>> - 
+
+  
+      
+> *Note: The click-through links contained within the discussion sections may send you to an external site.*
+___  
+___
+___
+> - ### **CONTENT TITLE**
+>>>  *SUBTITLE* <br>
+>>>>  
+>>>  
+>>> 
+___  
+___
+___  
+> - ### **CONTENT TITLE**
+>>>  *SUBTITLE* <br>
+>>>>  
+>>>  
+>>> 
+___  
+___
+___  
+> - ### **CONTENT TITLE**
+>>>  *SUBTITLE* <br>
+>>>>  
+>>>  
+>>> 
+___  
+___
+___  
+> - ### **CONTENT TITLE**
+>>>  *SUBTITLE* <br>
+>>>>  
+>>>  
+>>> 
+___  
+___
+___  
+> - ### **CONTENT TITLE**
+>>>  *SUBTITLE* <br>
+>>>>  
+>>>  
+>>> 
+___  
+___
+___  
+>> ## ***SUMMARY***  
+>>>>  #### *SUBTITLE*  
+>>>> 
+>>>>  #### 
+>>>>  
+>>>> -   
+>>>> -   
+>>>> -   
+>>>> -  
+>>>> - 
+>>>> - 
+>>>> - 
+
+## ***CONCLUSION***  
+  ####
+  ####
+  > ####  
+  
+>>>>>>>>> 
+
+
+## About the Creators
+
+> ### 
+> ### 
+> ### 
+> ### 
+> ### 
 
 
 
-
-
-Credit for dino background image:
--https://www.publicdomainpictures.net/en/view-image.php?image=8603&picture=dinosaur-background
-
-
-
-Slideshow component: 
-https://www.npmjs.com/package/react-slideshow-image
-
-#### Testing testing

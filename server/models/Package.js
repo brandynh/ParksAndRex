@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const perkSchema = require('./Perk');
+const Perk = require('./Perk');
 
 const packageSchema = new Schema({
   name: {
@@ -13,8 +13,8 @@ const packageSchema = new Schema({
   description: {
     type: String
   },
-  perks: [perkSchema],
-
+  perks: [Perk.schema],
+//   console warnings thrown here for img hrefs and alts
   image: {
     type: String
   },
