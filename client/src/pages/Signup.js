@@ -3,21 +3,22 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/mutations';
+import axios from 'axios';
 
 const Signup = () => {
 
-const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
-  const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+   const fetchDino = "https://dinoipsum.com/api/?format=text&paragraphs=1&words=1";
 
-  const [addUser, { error }] = useMutation(ADD_USER); 
-   console.log(userFormData)
-  const handleInputChange = (event) => {
+   const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
+   const [validated] = useState(false);
+   const [showAlert, setShowAlert] = useState(false);
+   const [addUser, { error }] = useMutation(ADD_USER); 
+   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
-  };
+   };
 
-  const handleFormSubmit = async (event) => {
+   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
@@ -40,9 +41,28 @@ const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', 
       email: '',
       password: '',
     });
-  };
+   };
 
-  return (
+   async function getName() {
+      return await axios.get(fetchDino)
+      .then((res) => {
+         console.log(res)
+         return res.data.split('.').join("")
+         })
+   }
+
+   async function generate() {
+      const dino = await getName()
+         setUserFormData({
+            username: dino
+         })
+   }
+   
+
+
+
+
+   return (
     <>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -58,11 +78,16 @@ const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', 
             placeholder='Your username'
             name='username'
             onChange={handleInputChange}
-            value={userFormData.username}
+            value={userFormData.username ? userFormData.username : ''}
             required
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
+
+         <Button onClick={async () => await generate()}>
+            Generate Username
+         </Button>
+
 
         <Form.Group>
           <Form.Label htmlFor='firstName'>First name</Form.Label>
