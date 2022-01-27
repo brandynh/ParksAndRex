@@ -7,17 +7,12 @@ import axios from 'axios';
 
 const Signup = () => {
 
-   const fetchDino = "https://dinoipsum.com/api/?format=html&paragraphs=1&words=1";
+   const fetchDino = "https://dinoipsum.com/api/?format=text&paragraphs=1&words=1";
 
    const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
    const [validated] = useState(false);
    const [showAlert, setShowAlert] = useState(false);
-   const [dinoName, setName] = useState({
-   name: '',
-   loading: true
-   })
    const [addUser, { error }] = useMutation(ADD_USER); 
-   console.log(userFormData)
    const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
@@ -49,19 +44,17 @@ const Signup = () => {
    };
 
    async function getName() {
-      await axios.get(fetchDino)
+      return await axios.get(fetchDino)
       .then((res) => {
          console.log(res)
-         return res.data
+         return res.data.split('.').join("")
          })
    }
 
-   async function generate(e) {
-      e.preventDefault();
-      e.stopPropagation();
-         setName({
-            name: getName(),
-            loading: false
+   async function generate() {
+      const dino = await getName()
+         setUserFormData({
+            username: dino
          })
    }
    
@@ -85,15 +78,16 @@ const Signup = () => {
             placeholder='Your username'
             name='username'
             onChange={handleInputChange}
-            value={dinoName ? dinoName.name : userFormData.username}
+            value={userFormData.username ? userFormData.username : ''}
             required
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
 
-         <Button onClick={generate()}>
+         <Button onClick={async () => await generate()}>
             Generate Username
          </Button>
+
 
         <Form.Group>
           <Form.Label htmlFor='firstName'>First name</Form.Label>
