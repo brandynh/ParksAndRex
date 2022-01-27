@@ -29,3 +29,22 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+// Define `addOrder` mutation 
+export const ADD_ORDER = gql`
+  mutation addOrder($products: [ID]!) {
+    addOrder(products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
+        description
+        price
+        quantity
+        category {
+          name
+        }
+      }
+    }
+  }
+`;
