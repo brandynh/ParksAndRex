@@ -67,7 +67,7 @@ db.once('open', async () => {
       password: 'password11'
    });
 
-   console.log('users seeded');
+   console.log('Data seeded');
 
    process.exit();
 });
