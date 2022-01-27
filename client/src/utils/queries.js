@@ -21,3 +21,15 @@ export const QUERY_ME = gql`
     }
 }
 `;
+export const QUERY_PACKAGES = gql`
+query packages {
+  packages {
+    name
+    description
+    perks{
+      description
+    }
+    image
+    price 
+  }
+}`
