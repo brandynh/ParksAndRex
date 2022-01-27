@@ -16,17 +16,6 @@ font-family: 'Sora', sans-serif; */
   --light-green: #D7FCB5
 }
 
-h1{
-  font-family: Bangers;
-  color: var(--purple);
-  font-size: 75px;
-}
-
-p {
-  font-family: Sora;
-  color: var(--black)
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -47,6 +36,30 @@ code {
     monospace;
 }
 
+h1{
+  font-family: Bangers;
+  color: var(--purple);
+  font-size: 75px;
+}
+
+p {
+  font-family: Sora;
+  color: var(--black)
+}
+
+button {
+  background: var(--dark-blue);
+  color: var(--dino-grey);
+  font-family: Bangers;
+  font-size: 25px;
+  margin: 10px;
+}
+
+button:hover {
+  background: var(--dark-blue);
+  color: var(--pink);
+}
+
 Link {
   text-decoration: none;
 }
@@ -56,7 +69,12 @@ Link {
 }
 
 .navbar-copy {
-  color: #c02537 !important;
+  color: var(--dino-grey) !important;
+  font-family: Bangers
+}
+
+.navbar-copy:hover {
+  color:var(--pink)!important;
 }
 
 .navbar {
@@ -65,7 +83,10 @@ Link {
 
 .logo:focus {
   outline:none;
+  box-shadow:  8px 8px 8px var(--pink);
+  transform: scale(1.07);
 }
+
 
 .container {
   max-width: unset;

@@ -14,15 +14,15 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto text-center">
           <Nav.Link className="navbar-copy" href="/">Home</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/shop">Visit</Nav.Link>
-          <Nav.Link href="/checkout">Checkout</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/" onClick={() => Auth.logout()}>
+          <Nav.Link className="navbar-copy" href="/about">About</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/shop">Visit</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
+          <Nav.Link className="navbar-copy"href="/login">Login</Nav.Link>
+          <Nav.Link className="navbar-copy"href="/" onClick={() => Auth.logout()}>
             Logout
           </Nav.Link>
-          <Nav.Link href="/signup">Sign Up</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/signup">Sign Up</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
