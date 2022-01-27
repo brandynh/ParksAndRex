@@ -27,8 +27,6 @@ p {
   color: var(--black)
 }
 
-
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -44,7 +42,6 @@ main, body {
   background-color: var(--light-blue);
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -58,14 +55,16 @@ Link {
   border:none;
 }
 
+.navbar-copy {
+  color: #c02537 !important;
+}
+
 .navbar {
-  background: var(--dark-blue)
+  background: var(--dark-blue);
 }
 
 .logo:focus {
-  border:none;
   outline:none;
-  box-shadow:none
 }
 
 .container {

@@ -8,7 +8,7 @@ const Shop = () => {
   return (
       <div className="container">
         <div className="row justify-content-center">
-      <h1> HI HERE IS THE SHOP PAGE</h1>
+      <h1>Choose One Of Our Exclusive Tour Packages</h1>
       </div>
       {/* Feature basic tours/packages/tickets for purchase. Use Package component for each item. Start with 3, add more
     —and possibly other pages for gift shop, etc.—as we progress. */}
