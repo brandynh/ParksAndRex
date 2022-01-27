@@ -5,7 +5,7 @@ import Auth from "../utils/auth";
 
 const Header = () => {
   return (
-    <Navbar expand="false" className="justify-content-center navbar">
+    <Navbar expand="false" className="navbar justify-content-center">
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo">
         <Navbar.Brand>
           <img className="img-fluid" src={dinosaurImg} alt="dinosaurs" />
@@ -13,16 +13,16 @@ const Header = () => {
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto text-center">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/shop">Visit</Nav.Link>
-          <Nav.Link href="/checkout">Checkout</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
-          <Nav.Link href="/" onClick={() => Auth.logout()}>
+          <Nav.Link className="navbar-copy" href="/">Home</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/about">About</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/shop">Visit</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
+          <Nav.Link className="navbar-copy"href="/login">Login</Nav.Link>
+          <Nav.Link className="navbar-copy"href="/" onClick={() => Auth.logout()}>
             Logout
           </Nav.Link>
-          <Nav.Link href="/signup">Sign Up</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/signup">Sign Up</Nav.Link>
+          <Nav.Link className="navbar-copy" href="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
