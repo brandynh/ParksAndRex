@@ -57,7 +57,7 @@ button {
 
 button:hover {
   background: var(--dark-blue);
-  color: var(--pink);
+  color: var(--purple);
 }
 
 Link {
@@ -74,7 +74,7 @@ Link {
 }
 
 .navbar-copy:hover {
-  color:var(--pink)!important;
+  color:var(--purple)!important;
 }
 
 .navbar {
@@ -83,7 +83,7 @@ Link {
 
 .logo:focus {
   outline:none;
-  box-shadow:  8px 8px 8px var(--pink);
+  box-shadow:  8px 8px 8px var(--purple);
   transform: scale(1.07);
 }
 
