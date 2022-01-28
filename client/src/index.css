@@ -6,37 +6,42 @@ font-family: 'Sora', sans-serif; */
 :root {
   --light-blue: #b5d7fc;
   --dark-bruise: #7f5667;
-  --light-bruise: #A58894;
+  --light-bruise: #a58894;
   --dino-yellow: #bf9b4a;
-  --dino-grey: #cecdcb; 
+  --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
   --purple: #7a49a5;
   --dark-blue: #4974a5;
-  --pink: #FCB5D7;
-  --light-green: #D7FCB5
+  --pink: #fcb5d7;
+  --light-green: #d7fcb5;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root { height: 100%; }
+html,
+body,
+#root {
+  height: 100%;
+}
 
-main, body {
+main,
+body {
   background-color: var(--light-blue);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-h1{
+h1 {
   font-family: Bangers;
   color: var(--purple);
   font-size: 75px;
@@ -57,27 +62,33 @@ button {
 
 button:hover {
   background: var(--dark-blue);
-  color: var(--pink);
+  color: hsl(272, 39%, 70%)
 }
 
 Link {
   text-decoration: none;
 }
 
-Nav {
-   margin-top: 75px;
+.homeBtn {
+  padding: 8px;
+  margin: 5px;
 }
+
+Nav {
+  margin-top: 75px;
+}
+
 .logo {
-  border:none;
+  border: none;
 }
 
 .navbar-copy {
   color: var(--dino-grey) !important;
-  font-family: Bangers
+  font-family: Bangers;
 }
 
 .navbar-copy:hover {
-  color:var(--pink)!important;
+  color: var(--pink) !important;
 }
 
 .navbar {
@@ -87,28 +98,46 @@ Nav {
 }
 
 .logo:focus {
-  outline:none;
-  box-shadow:  8px 8px 8px var(--pink);
+  outline: none;
+  box-shadow: 8px 8px 8px var(--pink);
   transform: scale(1.07);
 }
-
 
 .container {
   max-width: unset;
 }
 
-.page-footer {
-  position: sticky;
-  top: 100vh;
-}
-
 .slide-container {
-  padding:15px;
+  padding: 15px;
 }
 
 .jumbotron {
-background-image: url('../src/assets/images/dino-background-public.jpeg');
-background-size: cover;
-width:100%;
-height: 100vh;
+  background-image: url("../src/assets/images/dino-background-public.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0px;
+}
+
+Footer {
+  background-color: var(--dark-blue);
+  height: 140px;
+}
+
+/* #linkBox {
+} */
+
+#helpImg {
+  width: 10vh;
+  border-radius: 4px;
+  margin: auto;
+}
+#helpImg:hover {
+   cursor: pointer;
+   transform: scale(1.05)
+}
+
+#builtBy {
+  color: var(--light-blue);
+  font-size: 20px;
 }
