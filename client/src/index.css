@@ -44,6 +44,11 @@ code {
     monospace;
 }
 
+Form {
+   padding: 10px;
+   margin: 2px;
+}
+
 h1 {
   font-family: Bangers;
   color: var(--purple);
@@ -103,7 +108,7 @@ Nav {
 .logo:focus {
   outline: none;
   box-shadow: 8px 8px 8px var(--pink);
-  transform: scale(1.07);
+  transform: scale(1.04);
 }
 
 .container {
@@ -135,17 +140,22 @@ Footer {
   width: 10vh;
   border-radius: 4px;
   margin: auto;
+  opacity: .75;
 }
 
 #helpImg:hover {
   cursor: pointer;
   transform: scale(1.05);
+  opacity: .95;
 }
 
 #builtBy {
   color: var(--light-blue);
-  font-size: 20px;
+  font-size: 17px;
   border: 2px solid;
+  border-radius: 40%, 20%, 20%, 40%;
+  padding: 13px;
+  line-height: 1.2;
 }
 
 #generateBtn {

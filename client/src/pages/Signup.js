@@ -57,6 +57,10 @@ const Signup = () => {
             username: dino
          })
    }
+
+   if (showAlert) {
+      setTimeout((setShowAlert(false)), 5000)
+   }
    
 
 
@@ -67,7 +71,7 @@ const Signup = () => {
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+        <Alert onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
 

@@ -9,8 +9,7 @@ const Login = (props) => {
    const [validated] = useState(false);
    const [showAlert, setShowAlert] = useState(false);
  
-   const [login, { error }] = useMutation(LOGIN_USER); 
-    console.log(userFormData)
+   const [login] = useMutation(LOGIN_USER); 
    const handleInputChange = (event) => {
      const { name, value } = event.target;
      setUserFormData({ ...userFormData, [name]: value });
@@ -38,12 +37,18 @@ const Login = (props) => {
      });
    };
 
+   if (showAlert) {
+      setTimeout(() => {
+         setShowAlert(false)
+      }, 3000)
+   }
+
   return (
      
    <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
    {/* show alert if server response is bad */}
    <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-     Something went wrong with your signup!
+     Something went wrong with your login!
    </Alert>
    <Form.Group>
      <Form.Label htmlFor='username'>Username</Form.Label>
@@ -76,7 +81,6 @@ const Login = (props) => {
      variant='success'>
       Submit
    </Button>
-   {error && <div>Sign in failed</div>}
  </Form>
   );
 };

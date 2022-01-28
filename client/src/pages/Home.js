@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="jumbotron pt-3">
-            <h1>Life, Uh, Finds a Way</h1>
+    <div className="jumbotron pt-5">
+            <h1>Life, Uh... <br /> Finds a Way</h1>
             <p>
               Welcome to the world's premier dinosaur adventure safari theme park.
             </p>
