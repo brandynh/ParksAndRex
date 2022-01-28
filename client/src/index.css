@@ -71,6 +71,7 @@ button {
 button:hover {
   background: var(--dark-blue);
   color: hsl(272, 39%, 70%);
+
 }
 
 Link {
@@ -96,7 +97,8 @@ Nav {
 }
 
 .navbar-copy:hover {
-  color: var(--pink) !important;
+
+  color:var(--purple)!important;
 }
 
 .navbar {
@@ -106,9 +108,10 @@ Nav {
 }
 
 .logo:focus {
-  outline: none;
-  box-shadow: 8px 8px 8px var(--pink);
-  transform: scale(1.04);
+
+  outline:none;
+  box-shadow:  8px 8px 8px var(--purple);
+  transform: scale(1.07);
 }
 
 .container {
