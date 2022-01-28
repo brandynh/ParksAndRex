@@ -2,13 +2,18 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import dinosaurImg from "../assets/images/Dinologo1.png";
 import Auth from "../utils/auth";
+import '../header.css';
+import audio from '../assets/audio/Dino-sounds.mp3'
 
 const Header = () => {
-  return (
+
+   const roar = new Audio(audio);
+
+   return (
     <Navbar expand="false" className="navbar justify-content-center">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo">
-        <Navbar.Brand>
-          <img className="img-fluid" src={dinosaurImg} alt="dinosaurs" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo" id="glowBox">
+        <Navbar.Brand onClick={() => roar.play()}>
+          <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
         </Navbar.Brand>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
