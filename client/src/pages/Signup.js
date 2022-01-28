@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, FloatingLabel } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/mutations';
@@ -57,6 +57,10 @@ const Signup = () => {
             username: dino
          })
    }
+
+   if (showAlert) {
+      setTimeout((setShowAlert(false)), 5000)
+   }
    
 
 
@@ -67,12 +71,13 @@ const Signup = () => {
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+        <Alert onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
 
         <Form.Group>
           <Form.Label htmlFor='username'>Username</Form.Label>
+          <FloatingLabel>
           <Form.Control
             type='text'
             placeholder='Your username'
@@ -81,16 +86,18 @@ const Signup = () => {
             value={userFormData.username ? userFormData.username : ''}
             required
           />
+          </FloatingLabel>
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
 
-         <Button onClick={async () => await generate()}>
+         <Button id="generateBtn" onClick={async () => await generate()}>
             Generate Username
          </Button>
 
 
         <Form.Group>
           <Form.Label htmlFor='firstName'>First name</Form.Label>
+          <FloatingLabel>
           <Form.Control
             type='text'
             placeholder='Your first name'
@@ -98,11 +105,13 @@ const Signup = () => {
             onChange={handleInputChange}
             value={userFormData.firstName}
           />
+          </FloatingLabel>
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
           <Form.Label htmlFor='lastName'>Last name</Form.Label>
+          <FloatingLabel>
           <Form.Control
             type='text'
             placeholder='Your last name'
@@ -110,6 +119,7 @@ const Signup = () => {
             onChange={handleInputChange}
             value={userFormData.lastName}
           />
+          </FloatingLabel>
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
 

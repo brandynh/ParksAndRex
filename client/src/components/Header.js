@@ -2,13 +2,14 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import dinosaurImg from "../assets/images/Dinologo1.png";
 import Auth from "../utils/auth";
+import '../header.css';
 
 const Header = () => {
   return (
     <Navbar expand="false" className="navbar justify-content-center">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo" id="glowBox">
         <Navbar.Brand>
-          <img className="img-fluid" src={dinosaurImg} alt="dinosaurs" />
+          <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
         </Navbar.Brand>
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav">
