@@ -86,7 +86,7 @@ const Signup = () => {
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
 
-         <Button onClick={async () => await generate()}>
+         <Button id="generateBtn" onClick={async () => await generate()}>
             Generate Username
          </Button>
 

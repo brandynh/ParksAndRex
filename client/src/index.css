@@ -28,12 +28,15 @@ body {
 html,
 body,
 #root {
-  height: 100%;
+  height: 100vh;
 }
 
 main,
 body {
   background-color: var(--light-blue);
+}
+.background {
+  min-height: 70vh;
 }
 
 code {
@@ -62,7 +65,7 @@ button {
 
 button:hover {
   background: var(--dark-blue);
-  color: hsl(272, 39%, 70%)
+  color: hsl(272, 39%, 70%);
 }
 
 Link {
@@ -124,20 +127,28 @@ Footer {
   height: 140px;
 }
 
-/* #linkBox {
-} */
+#linkBox {
+  height: 70px;
+}
 
 #helpImg {
   width: 10vh;
   border-radius: 4px;
   margin: auto;
 }
+
 #helpImg:hover {
-   cursor: pointer;
-   transform: scale(1.05)
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 #builtBy {
   color: var(--light-blue);
   font-size: 20px;
+  border: 2px solid;
+}
+
+#generateBtn {
+   background-color:hsl(272, 39%, 70%);
+   justify-content: right;
 }
