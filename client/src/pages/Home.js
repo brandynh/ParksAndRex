@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="jumbotron pt-5">
+    <div className="jumbotron pt-5 ">
+         <div className="container">
             <h1>Life, Uh... <br /> Finds a Way</h1>
             <p>
               Welcome to the world's <em>premier</em> <br />
@@ -17,6 +18,7 @@ const Home = () => {
                 <button className="homeBtn">Book Your Visit Now</button>
               </Link>
             </div>
+         </div>
     </div>
   );
 };

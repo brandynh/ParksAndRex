@@ -26,10 +26,11 @@ const Package = ({imgLink}) => {
 
   return (
     <>
-   {packages.map((item, i) => {
-   //   const image = images[item.image];
-     return (
-      <Card id="pack-card" key={item} style={{ width: '18rem' }}>
+   {packages.map((item) => {
+
+
+   return (
+      <Card className="pack-card" key={item} style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
@@ -40,7 +41,7 @@ const Package = ({imgLink}) => {
       <ListGroup className="list-group-flush">
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
         <ListGroupItem>
-            {item.price}
+            {`$${item.price.toFixed(2)}`}
          </ListGroupItem>
       </ListGroup>
       <Card.Body>

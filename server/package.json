@@ -17,8 +17,8 @@
     "express": "^4.17.1",
     "graphql": "15.8.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.9",
-    "mongoose-currency": "file:",
+    "mongoose": "^4.13.21",
+    "mongoose-currency": "^0.2.0",
     "stripe": "^8.198.0"
   },
   "devDependencies": {
