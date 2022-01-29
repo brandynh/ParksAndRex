@@ -45,7 +45,15 @@ const Package = ({}) => {
         <Card.Text>
           {item.description}
         </Card.Text>
-      </Card.Body>git
+        <Card.Text>
+        {item.perks.map((subitem) => {
+                return (
+                  <p>{subitem.description}</p>
+                )
+              })}
+        </Card.Text>
+
+      </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
         <ListGroupItem>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
-const Perk = require('./Perk');
+// const Perk = require('./Perk');
 require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 
@@ -13,7 +13,11 @@ const packageSchema = new Schema({
   description: {
     type: String
   },
-  perks: [Perk.schema],
+  perks: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Perk',
+    required: true
+  }],
   image: {
     type: String
   },
