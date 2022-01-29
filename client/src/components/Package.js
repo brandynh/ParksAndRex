@@ -3,9 +3,7 @@ import React from 'react';
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import {useQuery} from '@apollo/client';
 import {QUERY_PACKAGES} from '../utils/queries';
-import dinoTestImg from "../assets/images/dino-desktop-2.jpeg";
-import dinoPark from "../assets/images/dino-desktop.jpeg";
-import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
+
 
 const Package = ({imgLink}) => {
   const { data, error } = useQuery(QUERY_PACKAGES);
@@ -19,19 +17,15 @@ const Package = ({imgLink}) => {
 
   console.log(packages);
 
-  const images = [
-    dinoTestImg, dinoPark, dinoPark2
-  ];
   
 
   return (
     <>
    {packages.map((item) => {
 
-
    return (
       <Card className="pack-card" key={item} style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+      <Card.Img variant="top" src={item.image} />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
         <Card.Text>

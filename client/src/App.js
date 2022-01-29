@@ -8,9 +8,8 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // CSS & IMGs
-import "./App.css";
 import helpImg from './assets/images/jurassic-foundation.png';
-
+import "./App.css";
 //
 // COMPONENT IMPORTS BELOW
 //
