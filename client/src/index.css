@@ -185,21 +185,22 @@ Footer {
   background-color: var(--dark-blue);
   height: 100px;
   box-shadow: -6px -8px 15px 8px slategrey;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
-#linkBox {
-  height: 30px;
-}
-
-#helpImg {
-  width: 10vh;
+.linkbarImg {
+  width: 8vh;
   border-radius: 4px;
-  margin: auto;
+  margin: 10px;
   opacity: .75;
-  border-radius: 20%
+  border-radius: 20%;
+
 }
 
-#helpImg:hover {
+.linkbarImg:hover{
   cursor: pointer;
   transform: scale(1.05);
   opacity: .95;
@@ -210,6 +211,7 @@ Footer {
   font-size: 17px;
   min-width: 400px;
   line-height: 1.2;
+
 }
 
 #generateBtn {
