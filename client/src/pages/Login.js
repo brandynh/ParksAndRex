@@ -3,6 +3,8 @@ import { Form, Alert, Button } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import '../Forms.css'
+
 
 const Login = (props) => {
    const [userFormData, setUserFormData] = useState({username: '', password: ''});
@@ -50,7 +52,7 @@ const Login = (props) => {
    <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
      Something went wrong with your login!
    </Alert>
-   <Form.Group>
+   <Form.Group className="form-group">
      <Form.Label htmlFor='username'>Username</Form.Label>
      <Form.Control
        type='text'
@@ -63,7 +65,7 @@ const Login = (props) => {
      <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
    </Form.Group>
 
-   <Form.Group>
+   <Form.Group className="form-group">
      <Form.Label htmlFor='password'>Password</Form.Label>
      <Form.Control
        type='password'
@@ -76,10 +78,11 @@ const Login = (props) => {
      <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
    </Form.Group>
    <Button
+      className="form-btn"
      disabled={!(userFormData.username && userFormData.password)}
      type='submit'
      variant='success'>
-      Submit
+      LOGIN
    </Button>
  </Form>
   );
