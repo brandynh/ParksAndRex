@@ -49,7 +49,7 @@ const Package = ({}) => {
         <Card.Text>
         {item.perks.map((subitem) => {
                 return (
-                  <p>{subitem.description}</p>
+                  <p> 🦖 [ {subitem.description} ]</p>
                 )
               })}
         </Card.Text>
