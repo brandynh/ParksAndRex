@@ -16,12 +16,8 @@ const Package = () => {
   const { data, error } = useQuery(QUERY_PACKAGES);
   const packages = data?.packages || [];
 
-<<<<<<< Updated upstream
 
   if (!packages) return null;
-=======
-  if (!packages) return error;
->>>>>>> Stashed changes
 
 
   const images = {
@@ -58,10 +54,8 @@ const Package = () => {
                 return (
 
                   <Link to="/">
-                  <p>🦖[{subitem.name}]</p>
+                  <p>[{subitem.name}]</p>
                   </Link>
-                  <p> 🦖 [ {subitem.description} ]</p>
-
                 )
               })}
         </Card.Text>
