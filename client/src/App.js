@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
+import Perks from "./pages/Perks";
 import Thanks from "./pages/Thanks";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -65,6 +66,7 @@ function App() {
                        <Route exact path="/login" element={<Login />} />
                        <Route exact path="/signup" element={<Signup />} />
                        <Route exact path="/about" element={<About />} />
+                       <Route exact path="/perks" element={<Perks />} />
                        <Route exact path="/checkout" element={<Checkout />} />
                        <Route exact path="/contact" element={<Contact />} />
                        <Route exact path="/thanks" element={<Thanks />} />

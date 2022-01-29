@@ -16,8 +16,12 @@ const Package = () => {
   const { data, error } = useQuery(QUERY_PACKAGES);
   const packages = data?.packages || [];
 
+<<<<<<< Updated upstream
 
   if (!packages) return null;
+=======
+  if (!packages) return error;
+>>>>>>> Stashed changes
 
 
   const images = {
