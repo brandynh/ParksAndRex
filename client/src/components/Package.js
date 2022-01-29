@@ -45,7 +45,7 @@ const Package = ({}) => {
         <Card.Text>
           {item.description}
         </Card.Text>
-      </Card.Body>
+      </Card.Body>git
       <ListGroup className="list-group-flush">
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
         <ListGroupItem>
