@@ -10,7 +10,7 @@ font-family: 'Sora', sans-serif; */
   --dino-yellow: #bf9b4a;
   --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
-  --purple: #7a49a5;
+  --purple: rgba(122, 73, 165, .8);
   --dark-blue: #4974a5;
   --pink: #fcb5d7;
   --light-green: #d7fcb5;
@@ -52,7 +52,7 @@ Form {
 h1 {
   font-family: Bangers;
   color: var(--purple);
-  font-size: 75px;
+  font-size: 55px;
 }
 
 p {
@@ -70,8 +70,13 @@ button {
 
 button:hover {
   background: var(--dark-blue);
-  color: hsl(272, 39%, 70%);
+  color: var(--purple);
 
+}
+
+.slide-img {
+   border-radius: 10px;
+   max-width: 90%;
 }
 
 Link {
@@ -84,34 +89,41 @@ Link {
 }
 
 Nav {
-  margin-top: 75px;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row nowrap;
 }
-
+Nav.Link {
+   flex: 0 1 auto
+}
+.nav-item {
+   display: flex;
+   flex-flow: row wrap;
+}
 .logo {
   border: none;
 }
 
 .navbar-copy {
-  color: var(--dino-grey) !important;
+  color: var(--purple) !important;
   font-family: Bangers;
 }
 
 .navbar-copy:hover {
-
+  transform: scale(1.2);
   color:var(--purple)!important;
 }
 
 .navbar {
   background: var(--dark-blue);
-  padding: 50px 0px 50px 0px;
-  height: 140px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  height: 100px;
 }
 
 .logo:focus {
-
   outline:none;
   box-shadow:  8px 8px 8px var(--purple);
-  transform: scale(1.07);
 }
 
 .container {
@@ -132,7 +144,7 @@ Nav {
 
 Footer {
   background-color: var(--dark-blue);
-  height: 140px;
+  height: 100px;
 }
 
 #linkBox {
@@ -163,5 +175,8 @@ Footer {
 
 #generateBtn {
    background-color:hsl(272, 39%, 70%);
-   justify-content: right;
+   margin-top: -30px;
+   margin-left: 40px;
 }
+
+

@@ -13,19 +13,19 @@ export default function Slideshow() {
     <div className="slide-container">
       <Fade>
         <div className="each-fade">
-          <img alt="dinosaur slideshow one" src={SlideImg1} />
+          <img className="slide-img" alt="dinosaur slideshow one" src={SlideImg1} />
         </div>
         <div className="each-fade">
-          <img alt="dinosaur slideshow two" src={SlideImg2} />
+          <img className="slide-img" alt="dinosaur slideshow two" src={SlideImg2} />
         </div>
         <div className="each-fade">
-          <img alt="dinosaur slideshow three" src={SlideImg3} />
+          <img className="slide-img" alt="dinosaur slideshow three" src={SlideImg3} />
         </div>
         <div className="each-fade">
-          <img alt="dinosaur slideshow four" src={SlideImg4} />
+          <img className="slide-img" alt="dinosaur slideshow four" src={SlideImg4} />
         </div>
         <div className="each-fade">
-          <img alt="dinosaur slideshow five" src={SlideImg5} />
+          <img className="slide-img" alt="dinosaur slideshow five" src={SlideImg5} />
         </div>
       </Fade>
     </div>

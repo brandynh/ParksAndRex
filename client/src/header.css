@@ -1,21 +1,77 @@
 
  #glowBox {
-   animation: Glow 3s ease-in-out infinite alternate;
-   border-radius: 8%;
+   animation: Glow 5s ease-in infinite alternate;
+   border-radius: 50%;
+   margin-top: -70px;
+   mix-blend-mode: normal;
  }
  #mainImg {
-    height: 150px;
-    padding-bottom: 20px;
+    height: 142px;
+    padding-bottom: 0px;
+ }
+ #mainImg::before {
+   animation: shake 2s both linear;
  }
  
  /*glow*/
  @keyframes Glow {
    from {
-     box-shadow: 0 0 5px var(--dark-blue), 0 0 10px var(--dark-blue), 0 0 25px var(--dark-blue), 0 0 40px var(--dark-blue),
-       0 0 60px var(--light-blue), 0 0 80px var(--light-blue), 0 0 100px var(--light-blue), 0 0 125px var(--light-blue);
+     box-shadow: 0 0px 0px var(--dark-blue), 0 0 0px var(--dark-blue), 0 0 0px var(--dark-blue), 0 0 0px var(--dark-blue),
+        0 0 0px var(--light-blue), 0 0 0px var(--light-blue), 0 0 0px var(--light-blue), 0 0 0px var(--light-blue);
    }
    to {
      box-shadow: 0 0 5px var(--dark-blue), 0 0 10px var(--dark-blue), 0 0 15px var(--dark-blue), 0 0 20px var(--dark-blue),
-       0 0 35px var(--light-blue), 0 0 40px var(--light-blue), 0 0 50px var(--light-blue), 0 0 75px var(--light-blue);
+        0 0 25px var(--light-blue), 0 0 30px var(--light-blue), 0 0 35px var(--light-blue), 0 0 40px var(--light-blue);
    }
  }
+
+ @keyframes shake {
+   0%, 100% {transform: translateX(0) rotate(0deg) translateY(0);}
+   15%, 35%, 55%, 75%, 95% {transform: translateX(-1px) rotate(-2deg) ;}
+   25%, 45%, 65%, 85% {transform: translateX(1px) rotate(2deg); }
+   10%, 30%, 50%, 70%, 90% {transform: translateY(1px);}    
+   20%, 40%, 60%, 80% {transform: translateY(-1px); }  
+}
+ @-webkit-keyframes shake {
+   0%, 100% {-webkit-transform: translateX(0) rotate(0deg) translateY(0);}
+   15%, 35%, 55%, 75%, 95% {-webkit-transform: translateX(-1px) rotate(-2deg) ;}
+   25%, 45%, 65%, 85% {-webkit-transform: translateX(1px) rotate(2deg); }
+   10%, 30%, 50%, 70%, 90% {-webkit-transform: translateY(1px);}    
+   20%, 40%, 60%, 80% {-webkit-transform: translateY(-1px); }
+}
+@-moz-keyframes shake {
+   0%, 100% {-moz-transform: translateX(0) rotate(0deg) translateY(0);}
+   15%, 35%, 55%, 75%, 95% {-moz-transform: translateX(-1px) rotate(-2deg) ;}
+   25%, 45%, 65%, 85% {-moz-transform: translateX(1px) rotate(2deg); }
+   10%, 30%, 50%, 70%, 90% {-moz-transform: translateY(1px);}    
+   20%, 40%, 60%, 80% {-moz-transform: translateY(-1px); }  
+}
+
+@-o-keyframes shake {
+    0%, 100% {-o-transform: translateX(0) rotate(0deg) translateY(0);}
+   15%, 35%, 55%, 75%, 95% {-o-transform: translateX(-1px) rotate(-2deg) ;}
+   25%, 45%, 65%, 85% {-o-transform: translateX(1px) rotate(2deg); }
+   10%, 30%, 50%, 70%, 90% {-o-transform: translateY(1px);}    
+   20%, 40%, 60%, 80% {-o-transform: translateY(-1px); }  
+}
+
+
+/* .shake {
+   -webkit-animation-name: shake;
+   -moz-animation-name: shake;
+   -o-animation-name: shake;
+   animation-name: shake;
+   -webkit-animation-duration: 2s;
+   -moz-animation-duration: 2s;
+   -o-animation-duration: 2s;
+   animation-duration: 2s;
+   -webkit-animation-fill-mode: both;
+   -moz-animation-fill-mode: both;
+   -o-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-iteration-count: 1;
+   -moz-animation-iteration-count: 1;    
+   -o-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+   -webkit-transition-timing-function:linear;    
+} */
