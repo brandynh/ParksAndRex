@@ -4,13 +4,11 @@ import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/mutations';
 import axios from 'axios';
 import Auth from '../utils/auth';
-import audio from '../assets/audio/Dino-sounds.mp3'
 
 
 const Signup = () => {
 
    const fetchDino = "https://dinoipsum.com/api/?format=text&paragraphs=1&words=1";
-   const roar = new Audio(audio);
 
    const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
    const [validated] = useState(false);
@@ -36,7 +34,6 @@ const Signup = () => {
       console.error(e);
       setShowAlert(true);
     }
-    roar.play();
     
     setUserFormData({
       firstName: '',

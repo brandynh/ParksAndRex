@@ -74,6 +74,11 @@ button:hover {
 
 }
 
+.slide-img {
+   border-radius: 50%;
+   max-width: 90%;
+}
+
 Link {
   text-decoration: none;
 }
