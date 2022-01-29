@@ -5,7 +5,7 @@ import { GiDinosaurBones } from 'react-icons/gi'
 import Links from './Links'
 import dinosaurImg from "../assets/images/Dinologo1.png";
 import audio from '../assets/audio/Dino-sounds.mp3'
-import '../Header.css';
+import '../header.css';
 
 
 
