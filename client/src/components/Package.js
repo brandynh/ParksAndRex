@@ -53,7 +53,7 @@ const Package = () => {
         {item.perks.map((subitem) => {
                 return (
                   <Link to="/">
-                  <p>🦖[{subitem.name}]</p>
+                  <p>[{subitem.name}]</p>
                   </Link>
                 )
               })}

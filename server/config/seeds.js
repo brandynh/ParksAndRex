@@ -1,18 +1,17 @@
 const db = require('./connection');
 const {
    User,
-   Category,
    Package,
    Perk
 } = require('../models');
 
 db.once('open', async () => {
 
-   await Perk.deleteMany();
+   // await Perk.deleteMany();
 
    const perks = await Perk.insertMany([
       {
-         name: 'General admission',
+         name: 'General Admission',
          description: 'General admission to the park for one full day. Includes access to the herbivore garden, raptor pen, and Psittacosaurus petting zoo (signed waiver required)'
       },
       {
