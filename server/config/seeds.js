@@ -1,7 +1,6 @@
 const db = require('./connection');
 const {
    User,
-   Category,
    Package,
    Perk
 } = require('../models');
