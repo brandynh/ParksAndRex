@@ -5,6 +5,7 @@ import { ADD_USER } from '../utils/mutations';
 import axios from 'axios';
 import Auth from '../utils/auth';
 import audio from '../assets/audio/Dino-sounds.mp3'
+import '../Forms.css'
 
 
 const Signup = () => {
@@ -33,10 +34,11 @@ const Signup = () => {
       console.log(data)
       Auth.login(data.addUser.token);
     } catch (e) {
+      roar.play();
       console.error(e);
       setShowAlert(true);
     }
-    roar.play();
+    
     
     setUserFormData({
       firstName: '',
@@ -63,7 +65,9 @@ const Signup = () => {
    }
 
    if (showAlert) {
-      setTimeout((setShowAlert(false)), 5000)
+      setTimeout(() => {
+         setShowAlert(false)
+      }, 3000)
    }
    
 
@@ -77,8 +81,8 @@ const Signup = () => {
           Something went wrong with your signup!
         </Alert>
 
-        <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
+        <Form.Group className="form-group">
+          <Form.Label htmlFor='username'>DinoName</Form.Label>
           <FloatingLabel>
           <Form.Control
             type='text'
@@ -97,8 +101,8 @@ const Signup = () => {
          </Button>
 
 
-        <Form.Group>
-          <Form.Label htmlFor='firstName'>First name</Form.Label>
+        <Form.Group className="form-group">
+          <Form.Label htmlFor='firstName'>Human Name</Form.Label>
           <FloatingLabel>
           <Form.Control
             type='text'
@@ -108,11 +112,6 @@ const Signup = () => {
             value={userFormData.firstName}
           />
           </FloatingLabel>
-          <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='lastName'>Last name</Form.Label>
           <FloatingLabel>
           <Form.Control
             type='text'
@@ -125,7 +124,7 @@ const Signup = () => {
           <Form.Control.Feedback type='invalid'></Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='email'
@@ -138,7 +137,7 @@ const Signup = () => {
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="form-group">
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
@@ -151,12 +150,13 @@ const Signup = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
+          className="form-btn"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
         </Button>
-        {error && <div>Sign up failed</div>}
+        {error && <div></div>}
       </Form>
     </>
   );
