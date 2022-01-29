@@ -11,7 +11,7 @@ font-family: 'Sora', sans-serif; */
   --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
   --purple: rgba(122, 73, 165, .8);
-  --dark-blue: #4974a5;
+  --dark-blue: rgba(73, 116, 165, .9);
   --pink: #fcb5d7;
   --light-green: #d7fcb5;
 }
@@ -89,7 +89,7 @@ Link {
 }
 
 Nav {
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -118,8 +118,8 @@ Nav.Link {
   background: var(--dark-blue);
   margin-bottom: 50px;
   padding-bottom: 50px;
-  height: 100px;
-}
+  height: 132px;
+  box-shadow: 0px 8px 15px 4px slategrey;}
 
 .logo:focus {
   outline:none;
@@ -137,18 +137,25 @@ Nav.Link {
 .jumbotron {
   background-image: url("../src/assets/images/dino-background-public.jpeg");
   background-size: cover;
+  
   width: 100%;
   height: 100vh;
   margin-bottom: 0px;
 }
 
+/* Iterable cards on shop page displaying packages */
+#pack-card {
+   text-align: center;
+}
+
 Footer {
   background-color: var(--dark-blue);
   height: 100px;
+  box-shadow: -6px -8px 15px 8px slategrey;
 }
 
 #linkBox {
-  height: 70px;
+  height: 50px;
 }
 
 #helpImg {
@@ -156,6 +163,7 @@ Footer {
   border-radius: 4px;
   margin: auto;
   opacity: .75;
+  border-radius: 20%
 }
 
 #helpImg:hover {
@@ -167,9 +175,7 @@ Footer {
 #builtBy {
   color: var(--light-blue);
   font-size: 17px;
-  border: 2px solid;
-  border-radius: 40%, 20%, 20%, 40%;
-  padding: 13px;
+  min-width: 400px;
   line-height: 1.2;
 }
 
