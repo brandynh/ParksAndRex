@@ -11,11 +11,8 @@ import { ADD_TO_CART } from '../utils/actions';
 
 
 const Package = ({}) => {
+  const [state, dispatch] = useStoreContext();
   const { data, error } = useQuery(QUERY_PACKAGES);
-
-  console.log(data);
-
-  
   const packages = data?.packages || [];
 
 
@@ -25,14 +22,20 @@ const Package = ({}) => {
   const images = {
     dinoTestImg, dinoPark, dinoPark2
   };
-  console.log(packages);
 
+  const addToCart = (item) => {
+    dispatch({ 
+      type: ADD_TO_CART, 
+      product: { ...item, purchaseQuantity: 1 }
+    });
+  }
   
 
   return (
     <>
    {packages.map((item) => {
      const image = images[item.image];
+     console.log(state.cart)
 
    return (
       <Card className="pack-card" key={item} style={{ width: '18rem' }}>
@@ -51,7 +54,7 @@ const Package = ({}) => {
       </ListGroup>
       <Card.Body>
         <Card.Link href="#"></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Card.Link href="#" onClick={() => addToCart(item)}>Buy This Package</Card.Link>
       </Card.Body>
     </Card>
      )
