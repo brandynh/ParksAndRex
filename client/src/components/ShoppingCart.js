@@ -10,7 +10,7 @@ const ShoppingCart = () => {
 
   return <div>
     {state?.cart.map((cartItem) => {
-      return <h1>Here is {cartItem.name}</h1>
+      return <h1>You bought the {cartItem.name} for {cartItem.price}</h1>
     })}
 
       {/* <h1>Here is {state.cart.title}</h1> */}
