@@ -21,6 +21,7 @@ export const QUERY_ME = gql`
     }
 }
 `;
+<<<<<<< HEAD
 
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
@@ -29,3 +30,17 @@ export const QUERY_CHECKOUT = gql`
     }
   }
 `;
+=======
+export const QUERY_PACKAGES = gql`
+query packages {
+  packages {
+    name
+    description
+    perks{
+      description
+    }
+    image
+    price 
+  }
+}`
+>>>>>>> b778115fe2abc9cf2ae56e1c7dbe799bd3129db1
