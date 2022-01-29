@@ -8,6 +8,7 @@ import dinoPark from "../assets/images/dino-desktop.jpeg";
 import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART } from '../utils/actions';
+import { Link } from "react-router-dom"
 
 
 const Package = ({}) => {
@@ -54,7 +55,9 @@ const Package = ({}) => {
       </ListGroup>
       <Card.Body>
         <Card.Link href="#"></Card.Link>
+        <Link to="/checkout">
         <Card.Link href="#" onClick={() => addToCart(item)}>Buy This Package</Card.Link>
+        </Link>
       </Card.Body>
     </Card>
      )
