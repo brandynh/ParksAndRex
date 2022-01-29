@@ -54,6 +54,42 @@
   border-radius: 100%;
 }
 
+Nav {
+   margin-top: 50px;
+   display: flex;
+   flex-flow: row nowrap;
+   width: 100vw;
+ }
+ #nav-box-main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 20px;
+    justify-content: center;
+    margin-top: -100px;
+ }
+ 
+ #nav-box-left, #nav-box-right {
+    height: 20px;
+    width: 25%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    transition: opacity 1s;
+    z-index: 2;
+ }
+ #nav-box-left {
+    margin-right: 230px;
+ }
+ #nav-box-right {
+    margin-left: 230px;
+ }
+ .nav-item {
+    font-size: 16px;
+    letter-spacing: .5px;
+    padding: 2px;
+ }
+
 
 /*glow*/
 @keyframes Glow {
