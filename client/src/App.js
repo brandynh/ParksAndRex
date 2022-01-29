@@ -19,8 +19,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import Contact from "./pages/Contact";
-import Perks from "./pages/Perks"
 import Login from "./pages/Login";
+import Perks from "./pages/Perks";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
 import Thanks from "./pages/Thanks";
