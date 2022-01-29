@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
-
+const {Schema} = mongoose;
 const Perk = require('./Perk');
+require('mongoose-currency').loadType(mongoose);
+const Currency = mongoose.Types.Currency;
 
 const packageSchema = new Schema({
   name: {
@@ -18,7 +18,7 @@ const packageSchema = new Schema({
     type: String
   },
   price: {
-    type: Number,
+    type: Currency,
     required: true,
     min: 0.99
   },

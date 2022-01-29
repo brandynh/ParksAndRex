@@ -39,21 +39,21 @@ db.once('open', async () => {
          description: 'For those wanting to experience the foundation of what makes Parks and Rex the premier safari adventure on Earth!',
          perks: [],
          image: 'dinoTestImg',
-         price: '20000',
+         price: '$20,000',
       },
       {
          name: 'T-Rex Package',
          description: 'If you really want to sink your teeth into everything that Parks and Rex has to offer, the T-Rex package has you covered.',
          perks: [],
          image:'dinoPark',
-         price: '50000',  
+         price: '$50,000',
       },
       {
          name: 'Brontosaurus Package',
          description: 'The ultimate experience. With the Brontosaurus package, nothing in Parks and Rex will be out of your reach',
          perks: [],
          image: 'dinoPark2',
-         price: '100000'
+         price: '$100,000'
       }
    ]);
 
