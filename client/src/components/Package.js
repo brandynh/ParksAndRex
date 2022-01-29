@@ -4,22 +4,26 @@ import {QUERY_PACKAGES} from '../utils/queries';
 import dinoTestImg from "../assets/images/dino-desktop-2.jpeg";
 import dinoPark from "../assets/images/dino-desktop.jpeg";
 import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
+import { useStoreContext } from "../utils/GlobalState";
+import { ADD_TO_CART } from '../utils/actions';
 
-const Package = ({imgLink}) => {
+const Package = () => {
+  const [state, dispatch] = useStoreContext();
   const { data, error } = useQuery(QUERY_PACKAGES);
-
-  console.log(data);
-
-  
   const packages = data?.packages || [];
 
   if (!packages) return null;
 
-  console.log(packages);
-
   const images = {
     dinoTestImg, dinoPark, dinoPark2
   };
+
+  const addToCart = (item) => {
+    dispatch({ 
+      type: ADD_TO_CART, 
+      product: { ...item, purchaseQuantity: 1 }
+    });
+  }
 
   return (
     <>
@@ -42,7 +46,7 @@ const Package = ({imgLink}) => {
                        <em>Cost:</em>${item.price}
                      </li>
                        <li>
-                       <button>Buy This Tour Package</button>
+                       <button onClick={() => addToCart(item)}>Buy This Tour Package</button>
                        </li>
                    </ul>
                  </p>
