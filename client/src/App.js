@@ -9,6 +9,8 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // CSS & IMGs
 import helpImg from './assets/images/jurassic-foundation.png';
+import { StoreProvider } from "./utils/GlobalState";
+
 import "./App.css";
 //
 // COMPONENT IMPORTS BELOW
@@ -53,6 +55,7 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <>
+          <StoreProvider>
             <Header/>
                  <div className="background mt-5 pt-5">
                     <main className="h-100 d-flex justify-content-center     align-items-center pt-3">
@@ -70,8 +73,9 @@ function App() {
                  </div>
             <Footer />
             <div id="linkBox" className="container d-flex justify-content-center mx-auto p-2">
-                  <img id="helpImg" alt="How can you help support dinosaur research? Click here!" src={helpImg} onClick={() => {window.location = "https://www.jurassicfoundation.org/"}} />
+              <img id="helpImg" alt="How can you help support dinosaur research? Click here!" src={helpImg} onClick={() => {window.location = "https://www.jurassicfoundation.org/"}} />
             </div>
+            </StoreProvider>
         </>
       </BrowserRouter>
     </ApolloProvider>
