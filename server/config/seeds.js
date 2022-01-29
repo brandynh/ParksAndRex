@@ -37,7 +37,7 @@ db.once('open', async () => {
       {
          name: 'Velociraptor Package',
          description: 'For those wanting to experience the foundation of what makes Parks and Rex the premier safari adventure on Earth!',
-         perks: perks[0],
+         perks: [],
          image: '',
          price: '20000',
       },

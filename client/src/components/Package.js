@@ -2,16 +2,15 @@ import React from 'react';
 import {useQuery} from '@apollo/client';
 import {QUERY_PACKAGES} from '../utils/queries';
 
-const Package = ({imgLink,}) => {
+const Package = ({imgLink}) => {
   const { data, error } = useQuery(QUERY_PACKAGES);
 
   console.log(data);
+
   
-  const packages = data.packages;
+  const packages = data?.packages || [];
 
-  console.log(packages);
-  console.log(error);
-
+  if (!packages) return null;
   return (
     <>
    {packages.map((item) => (
@@ -28,7 +27,7 @@ const Package = ({imgLink,}) => {
                  <p>
                    <ul className="list-unstyled list-inline text-center">
                      <li>
-                       <em>Cost:</em>{item.price}
+                       <em>Cost:</em>${item.price}
                      </li>
                        <li>
                        <button>Buy This Tour Package</button>

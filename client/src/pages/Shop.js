@@ -19,20 +19,6 @@ const Shop = () => {
           description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
           cost="$55,000"
         />
-
-        <Package
-          title="DINO PACK 2"
-          imgLink={dinoPark}
-          description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
-          cost="$1 million"
-        />
-
-        <Package
-          title="DINO PACK 3"
-          imgLink={dinoPark2}
-          description="this package freaking rules man let me tell you all about it here dino ipsum bla bla bla "
-          cost="$350,000"
-        />
       </div>
     </div>
   );
