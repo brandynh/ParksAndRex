@@ -1,13 +1,16 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
-<<<<<<< HEAD
-=======
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import {useQuery} from '@apollo/client';
 import {QUERY_PACKAGES} from '../utils/queries';
+import dinoTestImg from "../assets/images/dino-desktop-2.jpeg";
+import dinoPark from "../assets/images/dino-desktop.jpeg";
+import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
+import { useStoreContext } from "../utils/GlobalState";
+import { ADD_TO_CART } from '../utils/actions';
 
 
-const Package = ({imgLink}) => {
+const Package = ({}) => {
   const { data, error } = useQuery(QUERY_PACKAGES);
 
   console.log(data);
@@ -15,50 +18,25 @@ const Package = ({imgLink}) => {
   
   const packages = data?.packages || [];
 
+
   if (!packages) return null;
 
+
+  const images = {
+    dinoTestImg, dinoPark, dinoPark2
+  };
   console.log(packages);
 
   
->>>>>>> main
 
-const Package = ({imgLink, title, description, cost}) => {
   return (
-<<<<<<< HEAD
-    <div className="col-md-6 col-lg-4 mb-5">
-      <div className="mx-auto">
-        <div className="d-flex h-100 w-100">
-          <div>
-            <h2 align="center">{title}</h2>
-            <a target="_blank">
-            <img className="img-fluid project-img" src={imgLink}></img>
-            </a>
-            <p align="center">
-              {description}
-            <p>
-              <ul className="list-unstyled list-inline text-center">
-                <li>
-                  <em>Cost:</em>{cost}
-                </li>
-                  <li>
-                  <button>Buy This Tour Package</button>
-                  </li>
-              </ul>
-            </p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-};
-=======
     <>
    {packages.map((item) => {
+     const image = images[item.image];
 
    return (
       <Card className="pack-card" key={item} style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={item.image} />
+      <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
         <Card.Text>
@@ -82,8 +60,6 @@ const Package = ({imgLink, title, description, cost}) => {
    )
 };
 
->>>>>>> main
 
 export default Package;
-
 
