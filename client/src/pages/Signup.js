@@ -34,7 +34,6 @@ const Signup = () => {
       console.log(data)
       Auth.login(data.addUser.token);
     } catch (e) {
-      roar.play();
       console.error(e);
       setShowAlert(true);
     }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap'
 import Auth from '../utils/auth'
+import { Link } from 'react-router-dom'
 
 const Links = () => {
 
@@ -35,9 +36,11 @@ const Links = () => {
       <Nav.Item className="nav-item">
            <Nav.Link className="navbar-copy" href="/signup">Sign Up</Nav.Link>
       </Nav.Item>
+      <Link to="/checkout">
       <Nav.Item className="nav-item">
            <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
       </Nav.Item>
+      </Link>
    </div>
    </div>
    </>
