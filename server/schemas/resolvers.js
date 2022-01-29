@@ -8,7 +8,7 @@ const resolvers = {
 
     packages: async (parent, args) => {
       
-        const packages = await Package.find({});
+        const packages = await Package.find({}).populate('perks');
 
         return packages;
     
