@@ -52,9 +52,12 @@ const Package = () => {
         <Card.Text>
         {item.perks.map((subitem) => {
                 return (
+
                   <Link to="/">
                   <p>🦖[{subitem.name}]</p>
                   </Link>
+                  <p> 🦖 [ {subitem.description} ]</p>
+
                 )
               })}
         </Card.Text>

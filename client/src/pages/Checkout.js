@@ -1,5 +1,6 @@
 import React from "react";
 import ShoppingCart from "../components/ShoppingCart";
+import { Link } from "react-router-dom";
 // import Cart from "../components/Cart"
 
 const Checkout = () => {
@@ -10,7 +11,12 @@ const Checkout = () => {
     Should include functional "shopping cart" showing what user has purchased so far.*/}
 
       <ShoppingCart /* specific props somewhere in here */ />
+
+      <Link to="/shop">
+          <button className="homeBtn">Back to Shop</button>
+      </Link>
     </div>
+    
   );
 };
 
