@@ -14,7 +14,6 @@ const packageSchema = new Schema({
     type: String
   },
   perks: [Perk.schema],
-//   console warnings thrown here for img hrefs and alts
   image: {
     type: String
   },

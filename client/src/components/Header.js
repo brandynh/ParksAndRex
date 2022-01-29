@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Navbar, } from "react-bootstrap";
 import dinosaurImg from "../assets/images/Dinologo1.png";
 import Auth from "../utils/auth";
-import '../header.css';
+import '../Header.css';
 import audio from '../assets/audio/Dino-sounds.mp3'
 
 const Header = () => {

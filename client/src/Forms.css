@@ -1,0 +1,19 @@
+.form-group {
+   padding: -5px;
+   margin: 2px;
+   width: 100%;
+}
+
+.form-btn {
+   width: 50%;
+   margin: 5px 0px 2px 58px;
+   letter-spacing: .1rem;
+}
+
+
+#generateBtn {
+   background-color:hsl(272, 39%, 70%);
+   margin-top: -30px;
+   margin-left: 32px;
+   letter-spacing: .1rem;
+}
