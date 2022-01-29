@@ -12,21 +12,27 @@ db.once('open', async () => {
 
    const perks = await Perk.insertMany([
       {
+         name: 'General admission',
          description: 'General admission to the park for one full day. Includes access to the herbivore garden, raptor pen, and Psittacosaurus petting zoo (signed waiver required)'
       },
       {
+         name: 'T-Rex feeding',
          description: 'Tickets to the T-Rex feeding show (T-Rex sighting not guaranteed)'
       },
       {
+         name: 'Guided Jeep tour',
          description: 'Guided Jeep tour inside of the Stegosauraus grazing grounds'
       },
       {
+         name: 'Dino egg hatching',
          description: 'Tour of the dinosaur egg hatching facility (no cameras allowed)'
       },
       {
+         name: 'Submarine tour',
          description: 'Submarine tour of the aquatic dinosaur pool'
       },
       {
+         name: 'Hang-Gliding',
          description: 'Hang-Gliding with the Pterodactyls!'
       }
    ]);

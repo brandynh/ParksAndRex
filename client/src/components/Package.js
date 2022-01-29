@@ -11,7 +11,7 @@ import { ADD_TO_CART } from '../utils/actions';
 import { Link } from "react-router-dom"
 
 
-const Package = ({}) => {
+const Package = () => {
   const [state, dispatch] = useStoreContext();
   const { data, error } = useQuery(QUERY_PACKAGES);
   const packages = data?.packages || [];
@@ -30,6 +30,8 @@ const Package = ({}) => {
       product: { ...item, purchaseQuantity: 1 }
     });
   }
+
+  console.log(error);
   
 
   return (
@@ -46,14 +48,19 @@ const Package = ({}) => {
         <Card.Text>
           {item.description}
         </Card.Text>
+        
         <Card.Text>
         {item.perks.map((subitem) => {
                 return (
+
+                  <Link to="/">
+                  <p>🦖[{subitem.name}]</p>
+                  </Link>
                   <p> 🦖 [ {subitem.description} ]</p>
+
                 )
               })}
         </Card.Text>
-
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroupItem>Vestibulum at eros</ListGroupItem>
