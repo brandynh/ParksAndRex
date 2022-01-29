@@ -1,11 +1,11 @@
-import React from 'react';
-import {useQuery} from '@apollo/client';
-import {QUERY_PACKAGES} from '../utils/queries';
+/* eslint-disable react/jsx-no-undef */
+import React from "react";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useQuery } from "@apollo/client";
+import { QUERY_PACKAGES } from "../utils/queries";
 import dinoTestImg from "../assets/images/dino-desktop-2.jpeg";
 import dinoPark from "../assets/images/dino-desktop.jpeg";
 import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
-import { useStoreContext } from "../utils/GlobalState";
-import { ADD_TO_CART } from '../utils/actions';
 
 const Package = () => {
   const [state, dispatch] = useStoreContext();
@@ -15,53 +15,44 @@ const Package = () => {
   if (!packages) return null;
 
   const images = {
-    dinoTestImg, dinoPark, dinoPark2
+    dinoTestImg,
+    dinoPark,
+    dinoPark2,
   };
+  console.log(packages);
 
   const addToCart = (item) => {
-    dispatch({ 
-      type: ADD_TO_CART, 
-      product: { ...item, purchaseQuantity: 1 }
+    dispatch({
+      type: ADD_TO_CART,
+      product: { ...item, purchaseQuantity: 1 },
     });
-  }
+  };
 
   return (
     <>
-   {packages.map((item, i) => {
-     const image = images[item.image];
-     return (
-         <div className="col-md-6 col-lg-4 mb-5" key={i}>
-           <div className="mx-auto">
-             <div className="d-flex h-100 w-100">
-               <div>
-                 <h2 align="center">{item.name}</h2>
-                 <a target="_blank">
-                 <img className="img-fluid project-img" src={image}></img>
-                 </a>
-                 <p align="center">
-                   {item.description}
-                 <p>
-                   <ul className="list-unstyled list-inline text-center">
-                     <li>
-                       <em>Cost:</em>${item.price}
-                     </li>
-                       <li>
-                       <button onClick={() => addToCart(item)}>Buy This Tour Package</button>
-                       </li>
-                   </ul>
-                 </p>
-                 </p>
-               </div>
-             </div>
-           </div>
-         </div>
-     )
-})}
-   </>
-   )
+      {packages.map((item) => {
+        const image = images[item.image];
+
+        return (
+          <Card className="pack-card" key={item} style={{ width: "18rem" }}>
+            <Card.Img variant="top" src={item.image} />
+            <Card.Body>
+              <Card.Title>{item.name}</Card.Title>
+              <Card.Text>{item.description}</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>Vestibulum at eros</ListGroupItem>
+              <ListGroupItem>{`$${item.price.toFixed(2)}`}</ListGroupItem>
+            </ListGroup>
+            <Card.Body>
+              <Card.Link href="#"></Card.Link>
+              <Card.Link href="#">Another Link</Card.Link>
+            </Card.Body>
+          </Card>
+        );
+      })}
+    </>
+  );
 };
 
-
 export default Package;
-
-

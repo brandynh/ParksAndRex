@@ -1,7 +1,4 @@
-/* Google fonts below */
-/* font-family: 'Bangers', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Sora', sans-serif; */
+
 
 :root {
   --light-blue: #b5d7fc;
@@ -11,7 +8,7 @@ font-family: 'Sora', sans-serif; */
   --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
   --purple: rgba(122, 73, 165, .8);
-  --dark-blue: #4974a5;
+  --dark-blue: rgba(73, 116, 165, .9);
   --pink: #fcb5d7;
   --light-green: #d7fcb5;
 }
@@ -89,16 +86,44 @@ Link {
 }
 
 Nav {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-flow: row nowrap;
+  width: 100vw;
 }
-Nav.Link {
-   flex: 0 1 auto
-}
-.nav-item {
+#nav-box-main {
    display: flex;
    flex-flow: row wrap;
+   width: 100vw;
+   height: 20px;
+   justify-content: center;
+   margin-top: -100px;
+}
+
+#nav-box-left, #nav-box-right {
+   height: 20px;
+   width: 25%;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   transition: opacity 1s;
+   letter-spacing: .2px;
+   z-index: 2;
+}
+#nav-box-left {
+   margin-right: 220px;
+}
+#nav-box-right {
+   margin-left: 220px;
+}
+.hide {
+   opacity: 0;
+}
+.show {
+   opacity: 1;
+}
+.nav-item {
+   margin: 0px 2px;
 }
 .logo {
   border: none;
@@ -110,7 +135,6 @@ Nav.Link {
 }
 
 .navbar-copy:hover {
-  transform: scale(1.2);
   color:var(--purple)!important;
 }
 
@@ -119,15 +143,12 @@ Nav.Link {
   margin-bottom: 50px;
   padding-bottom: 50px;
   height: 100px;
+  box-shadow: 0px 4px 15px 8px slategrey;
 }
 
 .logo:focus {
-  outline:none;
+  outline: none;
   box-shadow:  8px 8px 8px var(--purple);
-}
-
-.container {
-  max-width: unset;
 }
 
 .slide-container {
@@ -141,14 +162,33 @@ Nav.Link {
   height: 100vh;
   margin-bottom: 0px;
 }
+#home-header {
+   margin-left: 65px;
+   width: 300px;
+}
+
+/* Iterable cards on shop page displaying packages */
+.pack-card {
+   text-align: center;
+   margin-bottom: 100px;
+   margin-top: 60px;
+   margin: 60px 30px 100px;
+   border-radius: 5%;
+   box-shadow: 10px 8px 10px 1px slategray; 
+}
+
+#pack-wrapper {
+   padding: 20px;
+}
 
 Footer {
   background-color: var(--dark-blue);
   height: 100px;
+  box-shadow: -6px -8px 15px 8px slategrey;
 }
 
 #linkBox {
-  height: 70px;
+  height: 30px;
 }
 
 #helpImg {
@@ -156,6 +196,7 @@ Footer {
   border-radius: 4px;
   margin: auto;
   opacity: .75;
+  border-radius: 20%
 }
 
 #helpImg:hover {
@@ -167,9 +208,7 @@ Footer {
 #builtBy {
   color: var(--light-blue);
   font-size: 17px;
-  border: 2px solid;
-  border-radius: 40%, 20%, 20%, 40%;
-  padding: 13px;
+  min-width: 400px;
   line-height: 1.2;
 }
 

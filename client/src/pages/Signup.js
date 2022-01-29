@@ -12,7 +12,7 @@ import '../Forms.css'
 const Signup = () => {
 
    const fetchDino = "https://dinoipsum.com/api/?format=text&paragraphs=1&words=1";
-
+   const roar = new Audio(audio)
    const [userFormData, setUserFormData] = useState({ firstName: '', lastName: '', username: '', email: '', password: '' });
    const [validated] = useState(false);
    const [showAlert, setShowAlert] = useState(false);

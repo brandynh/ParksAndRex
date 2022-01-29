@@ -1,62 +1,42 @@
-import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+/* eslint-disable jsx-a11y/heading-has-content */
+import React, { useState } from "react";
+import { Navbar, } from "react-bootstrap";
+import { GiDinosaurBones } from 'react-icons/gi'
+import Links from './Links'
 import dinosaurImg from "../assets/images/Dinologo1.png";
-import Auth from "../utils/auth";
-import "../header.css";
-import audio from "../assets/audio/Dino-sounds.mp3";
-import { Link } from "react-router-dom"
+import audio from '../assets/audio/Dino-sounds.mp3'
+import '../Header.css';
+
+
 
 const Header = () => {
-  const roar = new Audio(audio);
+   const [toggle, setToggle] = useState('hide')
+   const roar = new Audio(audio);
 
-  return (
-    <Navbar expand="" className="navbar justify-content-center">
-      <Navbar.Toggle aria-controls="" className="logo" id="glowBox">
-        <Navbar.Brand onClick={() => roar.play()}>
-          <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
-        </Navbar.Brand>
-      </Navbar.Toggle>
-      <Navbar.Collapse id="navbar">
-        <Nav
-          fill
-          variant="tabs"
-          deaultActiveKey="/"
-          className="ms-auto text-center"
-        >
-          <Link to="/">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Home</Nav.Link></Nav.Item>
-          </Link>
+   return (
+      <> 
+      <div className="flex row justify-content-center">
+         <h3 id="top-line" className="rule"></h3>
+      </div>
+         <Navbar expand="false" className="navbar justify-content-center">
+                 <i className="skelly" id="left-skelly">{<GiDinosaurBones size="32px"/>}</i>
+                    <h3 id="rule-left" className="rule"></h3>
+                 <i className="skelly" id="far-left-skelly">{<GiDinosaurBones size="32px"/>}</i>
+           <button aria-controls="" className="logo" id="glowBox">
+             <Navbar.Brand onClick={() => {
+                  setToggle('show')
+                  roar.play()
+                }}>
+               <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
+             </Navbar.Brand>
+           </button>
+           <i className="skelly" id="far-right-skelly">{<GiDinosaurBones size="32px"/>}</i>
+                    <h3 id="rule-right" className="rule"></h3>
+           <i className="skelly" id="right-skelly">{<GiDinosaurBones size="32px"/>}</i>
+         </Navbar>
 
-          <Link to="/about">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>About</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/shop">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Shop</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/checkout">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Checkout</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/login">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Login</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/" onClick={() => Auth.logout()}>
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Logout</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/signup">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Sign Up</Nav.Link></Nav.Item>
-          </Link>
-
-          <Link to="/contact">
-            <Nav.Item className="nav-item navbar-copy"><Nav.Link>Contact</Nav.Link></Nav.Item>
-          </Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+         <Links className={toggle} />
+    </>
   );
 };
 
