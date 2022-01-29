@@ -6,7 +6,8 @@ const Home = () => {
     <div className="jumbotron pt-5">
             <h1>Life, Uh... <br /> Finds a Way</h1>
             <p>
-              Welcome to the world's premier dinosaur adventure safari theme park.
+              Welcome to the world's <em>premier</em> <br />
+              dinosaur adventure safari theme park.
             </p>
             <div className="row">
               <Link to="/about">
