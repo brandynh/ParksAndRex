@@ -6,7 +6,7 @@ const About = () => {
   return (
       <div className="container about-container">
         <div align="center" className="slideshow">
-                      <Slideshow className="slideshow"/ >
+                      <Slideshow className="slideshow" />
                       </div>
 
         <div className="row justify-content-md-center align-center">
