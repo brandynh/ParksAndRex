@@ -27,6 +27,7 @@ query QUERY_PACKAGES  {
       name
       description
       perks {
+        name
         description
       }
       image
