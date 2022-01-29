@@ -90,8 +90,16 @@ Link {
 
 Nav {
   margin-top: 100px;
+  display: flex;
+  flex-flow: row nowrap;
 }
-
+Nav.Link {
+   flex: 0 1 auto
+}
+.nav-item {
+   display: flex;
+   flex-flow: row wrap;
+}
 .logo {
   border: none;
 }
