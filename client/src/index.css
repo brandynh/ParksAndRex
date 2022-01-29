@@ -97,22 +97,24 @@ Nav {
    width: 100vw;
    height: 20px;
    justify-content: center;
-   margin-top: -55px
+   margin-top: -100px;
 }
 
 #nav-box-left, #nav-box-right {
    height: 20px;
-   width: 28%;
+   width: 25%;
    display: flex;
    flex-flow: row wrap;
-   justify-content: space-around;
+   justify-content: center;
    transition: opacity 1s;
+   letter-spacing: .2px;
+   z-index: 2;
 }
 #nav-box-left {
-   margin-right: 205px;
+   margin-right: 220px;
 }
 #nav-box-right {
-   margin-left: 205px;
+   margin-left: 220px;
 }
 .hide {
    opacity: 0;
@@ -120,9 +122,8 @@ Nav {
 .show {
    opacity: 1;
 }
-
 .nav-item {
-   margin: auto;
+   margin: 0px 2px;
 }
 .logo {
   border: none;
@@ -141,7 +142,7 @@ Nav {
   background: var(--dark-blue);
   margin-bottom: 50px;
   padding-bottom: 50px;
-  height: 132px;
+  height: 100px;
   box-shadow: 0px 4px 15px 8px slategrey;
 }
 
@@ -149,8 +150,6 @@ Nav {
   outline: none;
   box-shadow:  8px 8px 8px var(--purple);
 }
-
-
 
 .slide-container {
   padding: 15px;
@@ -189,7 +188,7 @@ Footer {
 }
 
 #linkBox {
-  height: 50px;
+  height: 30px;
 }
 
 #helpImg {

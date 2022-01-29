@@ -1,26 +1,29 @@
 #top-line {
-   margin-top: -72px;
+   margin-top: 10px;
    margin-bottom: -30px;
    width: 57vw;
+}
+#top-line:after {
+   height: 5px;
 }
 
 #glowBox {
   animation: Glow 7s ease-in-out infinite alternate;
   border-radius: 50%;
-  margin-top: -42px;
+  margin-top: -30px;
   mix-blend-mode: normal;
   background-color: rgba(73, 116, 165, .85);
   width: 300px;
 }
 #mainImg {
-  height: 125px;
+  height: 130px;
   padding-bottom: 0px;
   margin: 30px 30px 30px 16px;
 }
 
 /* DINO BONES ICONS */
 .skelly {
-  margin-top: 43px;
+  margin-top: -30px;
   color: hsl(211, 50%, 25%);
 }
 #left-skelly {
@@ -47,7 +50,7 @@
   flex-grow: 1;
   height: 0.15em;
   background: rgba(38, 75, 115, 1);
-  margin-top: 77px;
+  margin-top: -5px;
   border-radius: 100%;
 }
 
