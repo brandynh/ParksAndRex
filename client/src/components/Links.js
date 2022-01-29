@@ -25,9 +25,6 @@ const Links = () => {
       </div>
       <div id="nav-box-right">
       <Nav.Item className="nav-item">
-           <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
-      </Nav.Item>
-      <Nav.Item className="nav-item">
            <Nav.Link className="navbar-copy"href="/login">Login</Nav.Link>
       </Nav.Item>
       <Nav.Item className="nav-item">
@@ -37,6 +34,9 @@ const Links = () => {
       </Nav.Item>
       <Nav.Item className="nav-item">
            <Nav.Link className="navbar-copy" href="/signup">Sign Up</Nav.Link>
+      </Nav.Item>
+      <Nav.Item className="nav-item">
+           <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
       </Nav.Item>
    </div>
    </div>
