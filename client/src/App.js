@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import {
   ApolloClient,
@@ -8,6 +7,9 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// CSS & IMGs
+import helpImg from './assets/images/jurassic-foundation.png';
+import "./App.css";
 //
 // COMPONENT IMPORTS BELOW
 //
@@ -53,22 +55,25 @@ function App() {
       <BrowserRouter>
       <StoreProvider>
         <>
-          <Header />
-          <div className="background">
-          <main className="h-100 d-flex justify-content-center align-items-center">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/shop" element={<Shop />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/signup" element={<Signup />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/checkout" element={<Checkout />} />
-            <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/thanks" element={<Thanks />} />
-          </Routes>
-          </main>
-          </div>
-          <Footer />
+            <Header/>
+                 <div className="background mt-5 pt-5">
+                    <main className="h-100 d-flex justify-content-center     align-items-center pt-3">
+                     <Routes>
+                       <Route exact path="/" element={<Home />} />
+                       <Route exact path="/shop" element={<Shop />} />
+                       <Route exact path="/login" element={<Login />} />
+                       <Route exact path="/signup" element={<Signup />} />
+                       <Route exact path="/about" element={<About />} />
+                       <Route exact path="/checkout" element={<Checkout />} />
+                       <Route exact path="/contact" element={<Contact />} />
+                       <Route exact path="/thanks" element={<Thanks />} />
+                     </Routes>
+                    </main>
+                 </div>
+            <Footer />
+            <div id="linkBox" className="container d-flex justify-content-center mx-auto p-2">
+                  <img id="helpImg" alt="How can you help support dinosaur research? Click here!" src={helpImg} onClick={() => {window.location = "https://www.jurassicfoundation.org/"}} />
+            </div>
         </>
         </StoreProvider>
       </BrowserRouter>

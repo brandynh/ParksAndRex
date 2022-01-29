@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 // gQL Queries expose specific data to front end through react hooks
 export const QUERY_USER = gql`
@@ -19,7 +19,7 @@ export const QUERY_ME = gql`
       username
       email
     }
-}
+  }
 `;
 
 export const QUERY_CHECKOUT = gql`
@@ -31,14 +31,15 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_PACKAGES = gql`
-query packages {
-  packages {
-    name
-    description
-    perks{
+query QUERY_PACKAGES  {
+    packages {
+      name
       description
+      perks {
+        description
+      }
+      image
+      price
     }
-    image
-    price 
   }
-}`
+`;

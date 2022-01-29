@@ -1,50 +1,61 @@
-/* Google fonts below */
-/* font-family: 'Bangers', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Sora', sans-serif; */
+
 
 :root {
   --light-blue: #b5d7fc;
   --dark-bruise: #7f5667;
-  --light-bruise: #A58894;
+  --light-bruise: #a58894;
   --dino-yellow: #bf9b4a;
-  --dino-grey: #cecdcb; 
+  --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
-  --purple: #7a49a5;
-  --dark-blue: 	#4974a5;
-  --pink: #FCB5D7;
-  --light-green: #D7FCB5
+  --purple: rgba(122, 73, 165, .8);
+  --dark-blue: rgba(73, 116, 165, .9);
+  --pink: #fcb5d7;
+  --light-green: #d7fcb5;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root { height: 100%; }
+html,
+body,
+#root {
+  height: 100vh;
+}
 
-main, body {
+main,
+body {
   background-color: var(--light-blue);
+}
+.background {
+  min-height: 70vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-h1{
+Form {
+   padding: 10px;
+   margin: 2px;
+}
+
+h1 {
   font-family: Bangers;
   color: var(--purple);
-  font-size: 75px;
+  font-size: 55px;
 }
 
 p {
   font-family: Sora;
-  color: var(--black)
+  color: var(--black);
+  font-size: x-large;
 }
 
 button {
@@ -52,58 +63,159 @@ button {
   color: var(--dino-grey);
   font-family: Bangers;
   font-size: 25px;
-  margin: 10px;
 }
 
 button:hover {
   background: var(--dark-blue);
-  color: var(--pink);
+  color: var(--purple);
+
+}
+
+.slide-img {
+   border-radius: 10px;
+   max-width: 90%;
 }
 
 Link {
   text-decoration: none;
 }
 
+.homeBtn {
+  padding: 8px;
+  margin: 5px;
+}
+
+Nav {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+}
+#nav-box-main {
+   display: flex;
+   flex-flow: row wrap;
+   width: 100vw;
+   height: 20px;
+   justify-content: center;
+   margin-top: -100px;
+}
+
+#nav-box-left, #nav-box-right {
+   height: 20px;
+   width: 25%;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   transition: opacity 1s;
+   letter-spacing: .2px;
+   z-index: 2;
+}
+#nav-box-left {
+   margin-right: 220px;
+}
+#nav-box-right {
+   margin-left: 220px;
+}
+.hide {
+   opacity: 0;
+}
+.show {
+   opacity: 1;
+}
+.nav-item {
+   margin: 0px 2px;
+}
 .logo {
-  border:none;
+  border: none;
 }
 
 .navbar-copy {
-  color: var(--dino-grey) !important;
-  font-family: Bangers
+  color: var(--purple) !important;
+  font-family: Bangers;
 }
 
 .navbar-copy:hover {
-  color:var(--pink)!important;
+  color:var(--purple)!important;
 }
 
 .navbar {
   background: var(--dark-blue);
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  height: 100px;
+  box-shadow: 0px 4px 15px 8px slategrey;
 }
 
 .logo:focus {
-  outline:none;
-  box-shadow:  8px 8px 8px var(--pink);
-  transform: scale(1.07);
-}
-
-
-.container {
-  max-width: unset;
-}
-
-.page-footer {
-  position: sticky;
-  top: 100vh;
+  outline: none;
+  box-shadow:  8px 8px 8px var(--purple);
 }
 
 .slide-container {
-  padding:15px;
+  padding: 15px;
 }
 
 .jumbotron {
-background-image: url('../src/assets/images/dino-background-public.jpeg');
-background-size: cover;
-width:100%;
-height: 100vh;
+  background-image: url("../src/assets/images/dino-background-public.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0px;
 }
+#home-header {
+   margin-left: 65px;
+   width: 300px;
+}
+
+/* Iterable cards on shop page displaying packages */
+.pack-card {
+   text-align: center;
+   margin-bottom: 100px;
+   margin-top: 60px;
+   margin: 60px 30px 100px;
+   border-radius: 5%;
+   box-shadow: 10px 8px 10px 1px slategray; 
+}
+
+#pack-wrapper {
+   padding: 20px;
+}
+
+Footer {
+  background-color: var(--dark-blue);
+  height: 100px;
+  box-shadow: -6px -8px 15px 8px slategrey;
+}
+
+#linkBox {
+  height: 30px;
+}
+
+#helpImg {
+  width: 10vh;
+  border-radius: 4px;
+  margin: auto;
+  opacity: .75;
+  border-radius: 20%
+}
+
+#helpImg:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: .95;
+}
+
+#builtBy {
+  color: var(--light-blue);
+  font-size: 17px;
+  min-width: 400px;
+  line-height: 1.2;
+}
+
+#generateBtn {
+   background-color:hsl(272, 39%, 70%);
+   margin-top: -30px;
+   margin-left: 40px;
+}
+
+
