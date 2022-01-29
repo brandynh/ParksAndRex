@@ -1,36 +1,42 @@
-import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+/* eslint-disable jsx-a11y/heading-has-content */
+import React, { useState } from "react";
+import { Navbar, } from "react-bootstrap";
+import { GiDinosaurBones } from 'react-icons/gi'
+import Links from './Links'
 import dinosaurImg from "../assets/images/Dinologo1.png";
-import Auth from "../utils/auth";
-import '../header.css';
 import audio from '../assets/audio/Dino-sounds.mp3'
+import '../header.css';
+
+
 
 const Header = () => {
-
+   const [toggle, setToggle] = useState('hide')
    const roar = new Audio(audio);
 
    return (
-    <Navbar expand="false" className="navbar justify-content-center">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" className="logo" id="glowBox">
-        <Navbar.Brand onClick={() => roar.play()}>
-          <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
-        </Navbar.Brand>
-      </Navbar.Toggle>
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto text-center">
-          <Nav.Link className="navbar-copy" href="/">Home</Nav.Link>
-          <Nav.Link className="navbar-copy" href="/about">About</Nav.Link>
-          <Nav.Link className="navbar-copy" href="/shop">Visit</Nav.Link>
-          <Nav.Link className="navbar-copy" href="/checkout">Checkout</Nav.Link>
-          <Nav.Link className="navbar-copy"href="/login">Login</Nav.Link>
-          <Nav.Link className="navbar-copy"href="/" onClick={() => Auth.logout()}>
-            Logout
-          </Nav.Link>
-          <Nav.Link className="navbar-copy" href="/signup">Sign Up</Nav.Link>
-          <Nav.Link className="navbar-copy" href="/contact">Contact</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+      <> 
+      <div className="flex row justify-content-center">
+         <h3 id="top-line" className="rule"></h3>
+      </div>
+         <Navbar expand="false" className="navbar justify-content-center">
+                 <i className="skelly" id="left-skelly">{<GiDinosaurBones size="32px"/>}</i>
+                    <h3 id="rule-left" className="rule"></h3>
+                 <i className="skelly" id="far-left-skelly">{<GiDinosaurBones size="32px"/>}</i>
+           <button aria-controls="" className="logo" id="glowBox">
+             <Navbar.Brand onClick={() => {
+                  setToggle('show')
+                  roar.play()
+                }}>
+               <img id="mainImg" src={dinosaurImg} alt="dinosaurs" />
+             </Navbar.Brand>
+           </button>
+           <i className="skelly" id="far-right-skelly">{<GiDinosaurBones size="32px"/>}</i>
+                    <h3 id="rule-right" className="rule"></h3>
+           <i className="skelly" id="right-skelly">{<GiDinosaurBones size="32px"/>}</i>
+         </Navbar>
+
+         <Links className={toggle} />
+    </>
   );
 };
 

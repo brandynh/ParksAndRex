@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
-
+const {Schema} = mongoose;
 const Perk = require('./Perk');
+require('mongoose-currency').loadType(mongoose);
+const Currency = mongoose.Types.Currency;
 
 const packageSchema = new Schema({
   name: {
@@ -14,12 +14,11 @@ const packageSchema = new Schema({
     type: String
   },
   perks: [Perk.schema],
-//   console warnings thrown here for img hrefs and alts
   image: {
     type: String
   },
   price: {
-    type: Number,
+    type: Currency,
     required: true,
     min: 0.99
   },

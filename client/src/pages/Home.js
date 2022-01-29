@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="jumbotron pt-5">
+    <div className="jumbotron pt-5 ">
+         <div id="home-header" className="container">
             <h1>Life, Uh... <br /> Finds a Way</h1>
             <p>
-              Welcome to the world's premier dinosaur adventure safari theme park.
+              Welcome to the world's <em>premier</em> <br />
+              dinosaur adventure safari theme park.
             </p>
             <div className="row">
               <Link to="/about">
@@ -16,6 +18,7 @@ const Home = () => {
                 <button className="homeBtn">Book Your Visit Now</button>
               </Link>
             </div>
+         </div>
     </div>
   );
 };

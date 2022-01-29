@@ -10,7 +10,9 @@ const Footer = () => {
                 target="_blank"
                 className="btn-floating mx-1"
               >
-                <i id="builtBy">© Built By The Darkside Dino Boiz</i>
+                <i id="builtBy">© Built By <br />
+                           The Darkside Dino Boiz
+                </i>
               </a>
             </li>
           </ul>
