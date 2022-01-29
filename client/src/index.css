@@ -10,7 +10,7 @@ font-family: 'Sora', sans-serif; */
   --dino-yellow: #bf9b4a;
   --dino-grey: #cecdcb;
   --dino-dark-grey: #cecdcb;
-  --purple: #7a49a5;
+  --purple: rgba(122, 73, 165, .8);
   --dark-blue: #4974a5;
   --pink: #fcb5d7;
   --light-green: #d7fcb5;
@@ -70,7 +70,7 @@ button {
 
 button:hover {
   background: var(--dark-blue);
-  color: hsl(272, 39%, 70%);
+  color: var(--purple);
 
 }
 
@@ -136,7 +136,7 @@ Nav {
 
 Footer {
   background-color: var(--dark-blue);
-  height: 140px;
+  height: 100px;
 }
 
 #linkBox {
