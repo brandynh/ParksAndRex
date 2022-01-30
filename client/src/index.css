@@ -219,3 +219,18 @@ Footer {
 }
 
 
+
+.cart-card {
+  background-color: var(--dark-blue);
+  color: var(--dino-dark-grey);
+}
+
+.checkout-img {
+  height:175px;
+  width: 175px;
+}
+
+h2 {
+  font-family: Bangers;
+  color: var(--purple)
+}
