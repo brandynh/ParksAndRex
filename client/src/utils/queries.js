@@ -35,3 +35,13 @@ query QUERY_PACKAGES  {
     }
   }
 `;
+
+export const QUERY_PERKS = gql`
+
+query QUERY_PERKS {
+  perks{
+    name
+    description
+  }
+}
+`

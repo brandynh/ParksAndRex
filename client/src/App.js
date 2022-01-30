@@ -22,7 +22,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup";
-import Perks from "./pages/Perks";
+import Perks from "./pages/PerkInfo.js";
 import Thanks from "./pages/Thanks";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
