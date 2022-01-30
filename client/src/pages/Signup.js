@@ -72,7 +72,7 @@ const Signup = () => {
    return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form className="login-signup-forms" noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!

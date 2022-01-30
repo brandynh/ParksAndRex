@@ -10,6 +10,9 @@
    letter-spacing: .1rem;
 }
 
+.login-signup-forms {
+   margin-top: -150px;
+}
 
 #generateBtn {
    background-color:hsl(272, 39%, 70%);

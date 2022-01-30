@@ -1,10 +1,11 @@
 #top-line {
-   margin-top: 10px;
-   margin-bottom: -30px;
-   width: 57vw;
+   margin-top: 4px;
+   width: 110vw;
 }
 #top-line:after {
-   height: 5px;
+   height: 30px;
+   border-radius: 0 0 100% 100%;
+   box-shadow: 0px 12px 12px 8px slategrey
 }
 
 #glowBox {
@@ -76,19 +77,34 @@ Nav {
     flex-flow: row wrap;
     justify-content: center;
     transition: opacity 1s;
+    letter-spacing: .2px;
     z-index: 2;
  }
  #nav-box-left {
     margin-right: 230px;
  }
  #nav-box-right {
-    margin-left: 230px;
+    margin-left: 220px;
+ }
+ .hide {
+    opacity: 0;
+ }
+ .show {
+    opacity: 1;
  }
  .nav-item {
-    font-size: 16px;
+    margin: 0px 2px;
     letter-spacing: .5px;
     padding: 2px;
  }
+ a {
+    cursor: default;
+    text-decoration: overline;
+ }
+ a:hover {
+   cursor: url(./assets/images/spear.png)15 10, move;
+}
+
 
 
 /*glow*/
@@ -108,7 +124,15 @@ Nav {
   }
 }
 
-
+@media screen and (max-width: 1050px) {
+   #nav-box-main {
+      margin: auto;
+      flex-flow: column wrap;
+   }
+   #nav-box-left, #nav-box-right {
+      margin: auto;
+   }
+}
 @media screen and (max-width: 925px) {
    .skelly {
       display: none;
@@ -123,5 +147,26 @@ Nav {
       text-align: center;
       align-content: center;
       margin: auto;
+   }
+   .background {
+      display: flex;
+      align-items: center;
+   }
+   main {
+      margin: 50px auto;
+      width: 80%;
+   }
+   #nav-box-main {
+      margin-top: 0;
+   }
+}
+@media screen and (max-width: 575px) {
+   #nav-box-left {
+      justify-content: left;
+      margin-left: 35px;
+   }
+   #nav-box-right {
+      justify-content: right;
+      margin-right: 35px;
    }
 }
