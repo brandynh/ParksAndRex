@@ -29,6 +29,12 @@ const Links = () => {
            <Nav.Link className="navbar-copy" href="/shop">Visit</Nav.Link>
       </Nav.Item>
       </Link>
+      
+      <Link to="/perks">
+      <Nav.Item className="nav-item">
+        <Nav.Link className="navbar-copy" href="/perks">Perks</Nav.Link>
+      </Nav.Item>
+      </Link>
 
       <Link to="/contact">
       <Nav.Item className="nav-item">

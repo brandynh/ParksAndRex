@@ -41,7 +41,7 @@ const Package = () => {
      console.log(state.cart)
 
    return (
-      <Card className="pack-card" key={item} style={{ width: '18rem' }}>
+      <Card className="pack-card" key={item} style={{  width: '18rem', minWidth: '20%' }}>
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
@@ -53,7 +53,7 @@ const Package = () => {
         {item.perks.map((subitem) => {
                 return (
 
-                  <Link to="/">
+                  <Link to="/perks">
                   <p>[{subitem.name}]</p>
                   </Link>
                 )
