@@ -140,4 +140,15 @@ Nav {
       align-content: center;
       margin: auto;
    }
+   .background {
+      display: flex;
+      align-items: center;
+   }
+   main {
+      margin: 100px auto;
+      width: 80%;
+   }
+   .slide-container {
+      /* width: 75%; */
+   }
 }

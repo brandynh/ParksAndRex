@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 .background {
-  min-height: 70vh;
+  min-height: 60vh;
   margin: 0;
 }
 
@@ -76,7 +76,7 @@ button:hover {
 
 .slide-img {
    border-radius: 10px;
-   max-width: 90%;
+   max-width: 80%;
 }
 
 Link {
@@ -116,8 +116,7 @@ Link {
 }
 
 .slide-container {
-  padding: 15px;
-}
+padding: 10px}
 
 .jumbotron {
   background-image: url("../src/assets/images/dino-background-public.jpeg");
