@@ -1,4 +1,4 @@
-
+/* Consider alternate color scheme / try it out */
 
 :root {
   --light-blue: #b5d7fc;
@@ -85,46 +85,7 @@ Link {
   margin: 5px;
 }
 
-Nav {
-  margin-top: 50px;
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100vw;
-}
-#nav-box-main {
-   display: flex;
-   flex-flow: row wrap;
-   width: 100vw;
-   height: 20px;
-   justify-content: center;
-   margin-top: -100px;
-}
 
-#nav-box-left, #nav-box-right {
-   height: 20px;
-   width: 25%;
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: center;
-   transition: opacity 1s;
-   letter-spacing: .2px;
-   z-index: 2;
-}
-#nav-box-left {
-   margin-right: 220px;
-}
-#nav-box-right {
-   margin-left: 220px;
-}
-.hide {
-   opacity: 0;
-}
-.show {
-   opacity: 1;
-}
-.nav-item {
-   margin: 0px 2px;
-}
 .logo {
   border: none;
 }
@@ -143,7 +104,7 @@ Nav {
   margin-bottom: 50px;
   padding-bottom: 50px;
   height: 100px;
-  box-shadow: 0px 4px 15px 8px slategrey;
+  box-shadow: 0px 12px 12px 6px slategrey;
 }
 
 .logo:focus {
@@ -219,18 +180,3 @@ Footer {
 }
 
 
-
-.cart-card {
-  background-color: var(--dark-blue);
-  color: var(--dino-dark-grey);
-}
-
-.checkout-img {
-  height:175px;
-  width: 175px;
-}
-
-h2 {
-  font-family: Bangers;
-  color: var(--purple)
-}

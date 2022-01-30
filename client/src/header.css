@@ -76,19 +76,33 @@ Nav {
     flex-flow: row wrap;
     justify-content: center;
     transition: opacity 1s;
+    letter-spacing: .2px;
     z-index: 2;
  }
  #nav-box-left {
     margin-right: 230px;
  }
  #nav-box-right {
-    margin-left: 230px;
+    margin-left: 220px;
+ }
+ .hide {
+    opacity: 0;
+ }
+ .show {
+    opacity: 1;
  }
  .nav-item {
-    font-size: 16px;
+    margin: 0px 2px;
     letter-spacing: .5px;
     padding: 2px;
  }
+ a {
+    cursor: default;
+ }
+ a:hover {
+   cursor: url(./assets/images/spear.png)15 15, move;
+}
+
 
 
 /*glow*/
