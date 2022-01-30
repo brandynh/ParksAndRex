@@ -1,10 +1,11 @@
 #top-line {
-   margin-top: 10px;
-   margin-bottom: -30px;
-   width: 57vw;
+   margin-top: 4px;
+   width: 110vw;
 }
 #top-line:after {
-   height: 5px;
+   height: 30px;
+   border-radius: 0 0 100% 100%;
+   box-shadow: 0px 12px 12px 8px slategrey
 }
 
 #glowBox {

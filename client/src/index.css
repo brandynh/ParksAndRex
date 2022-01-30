@@ -26,14 +26,17 @@ html,
 body,
 #root {
   height: 100vh;
+  margin: 0;
 }
 
 main,
 body {
   background-color: var(--light-blue);
+  margin: 0;
 }
 .background {
   min-height: 70vh;
+  margin: 0;
 }
 
 code {
