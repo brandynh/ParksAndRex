@@ -102,7 +102,7 @@ Nav {
     text-decoration: overline;
  }
  a:hover {
-   cursor: url(./assets/images/spear.png)15 15, move;
+   cursor: url(./assets/images/spear.png)15 10, move;
 }
 
 
@@ -124,7 +124,15 @@ Nav {
   }
 }
 
-
+@media screen and (max-width: 1050px) {
+   #nav-box-main {
+      margin: auto;
+      flex-flow: column wrap;
+   }
+   #nav-box-left, #nav-box-right {
+      margin: auto;
+   }
+}
 @media screen and (max-width: 925px) {
    .skelly {
       display: none;
@@ -145,10 +153,20 @@ Nav {
       align-items: center;
    }
    main {
-      margin: 100px auto;
+      margin: 50px auto;
       width: 80%;
    }
-   .slide-container {
-      /* width: 75%; */
+   #nav-box-main {
+      margin-top: 0;
+   }
+}
+@media screen and (max-width: 575px) {
+   #nav-box-left {
+      justify-content: left;
+      margin-left: 35px;
+   }
+   #nav-box-right {
+      justify-content: right;
+      margin-right: 35px;
    }
 }

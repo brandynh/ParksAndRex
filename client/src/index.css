@@ -34,9 +34,11 @@ body {
   background-color: var(--light-blue);
   margin: 0;
 }
+main {
+   margin-top: 40px;
+}
 .background {
   min-height: 60vh;
-  margin: 0;
 }
 
 code {
@@ -116,7 +118,9 @@ Link {
 }
 
 .slide-container {
-padding: 10px}
+   padding: 10px
+
+}
 
 .jumbotron {
   background-image: url("../src/assets/images/dino-background-public.jpeg");
@@ -129,6 +133,7 @@ padding: 10px}
    margin-left: 65px;
    width: 300px;
 }
+
 
 /* Iterable cards on shop page displaying packages */
 .pack-card {
