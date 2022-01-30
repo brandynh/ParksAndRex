@@ -7,7 +7,7 @@ import Auth from "../utils/auth"
 const Checkout = () => {
   return (
     <div>
-      <ShoppingCart /* specific props somewhere in here */ />
+      <ShoppingCart />
       <div className="justify-content-center" align="center">
       <Link to="/shop">
           <button className="homeBtn">Continue Shopping for Tour Packages</button>
