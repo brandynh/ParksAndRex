@@ -37,6 +37,7 @@ const typeDefs = gql`
 
   type Query {
     packages: [Package]
+    perks: [Perk]
     user: User
     checkout(products: [ID]!): Checkout
   }

@@ -4,10 +4,14 @@ import Perks from "../components/Perks";
 
 const PerksInfo = () => {
     return(
-    <div className="container perk-container">
-        <Perks />
-    </div>
-
+        <div className="container">
+        <div className="row justify-content-center">
+          <h1>Peek-A-Perk</h1>
+        </div>
+        <div id="pack-wrapper" className="row justify-content-center">
+          <Perks />
+        </div>
+      </div>
     )
 };
 

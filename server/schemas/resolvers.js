@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Perk, Package, Category, Order } = require('../models');
+const { User, Perk, Package, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_51KLbiADzqI05yRaXswNjugRVLmveyxn6iUB5m1rguhLoDq4LAzlMNacaAYtn0FaR9e2AfgJexChuzl29PHHsHM8J00skGklFfw');
 
@@ -12,6 +12,14 @@ const resolvers = {
 
         return packages;
     
+    },
+
+    perks: async (parent, args) => {
+      
+      const perks = await Perk.find({});
+
+      return perks;
+
     },
     
     user: async (parent, args, context) => {
