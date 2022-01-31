@@ -8,16 +8,22 @@ const Checkout = () => {
   return (
     <div>
       <ShoppingCart />
-      <div className="justify-content-center" align="center">
-      <Link to="/shop">
-          <button className="cart-btns">Continue Shopping for Tour Packages</button>
-      </Link>
-      {Auth.loggedIn() ?  ( <Link to="/thanks">
+      <div className="justify-content-center flex-col" align="center">
+      
+      {Auth.loggedIn() ?  (
+         <>
+            <Link to="/thanks">
               <button className="cart-btns">Complete Your Purchase</button>
-              </Link> )   :  ( <Link to="/login">
-              <button className="cart-btns">You must log in to complete your purchase</button>
               </Link>
-            )}      
+              <Link to="/shop">
+              <button className="cart-btns">Continue Shopping</button>
+          </Link>
+         </>
+          )   :  
+          ( <Link to="/login">
+              <button className="cart-btns">Login to complete purchase</button>
+              </Link>
+          )}      
             </div>
     </div>
     
