@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node config/seeds.js"
+    "seed": "node seeds/seeds.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
     "express": "^4.17.1",
     "graphql": "15.8.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^4.13.21",
+    "mongoose": "^5.9.10",
     "mongoose-currency": "^0.2.0",
     "stripe": "^8.198.0"
   },
