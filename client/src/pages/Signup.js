@@ -94,7 +94,7 @@ const Signup = () => {
         </Form.Group>
 
          <Button id="generateBtn" onClick={async () => await generate()}>
-            Generate Username
+            Generate
          </Button>
 
         <Form.Group className="form-group">

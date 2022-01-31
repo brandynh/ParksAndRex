@@ -97,7 +97,7 @@ const Contact = () => {
         </div>
         <div className="row">
           <div className="col-md-12">
-        <button type="submit">Submit</button>
+        <button id="contact-btn" type="submit">Submit</button>
         </div>
         </div>
 

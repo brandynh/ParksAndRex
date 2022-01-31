@@ -9,11 +9,11 @@
 }
 
 #glowBox {
-  animation: Glow 7s ease-in-out infinite alternate;
+  animation: Glow 6s ease-in-out infinite alternate;
   border-radius: 50%;
   margin-top: -50px;
   mix-blend-mode: normal;
-  background-color: rgba(73, 116, 165, .95);
+  background-color: rgba(73, 116, 165, 1);
   width: 300px;
 }
 #mainImg {
