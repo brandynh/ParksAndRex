@@ -47,7 +47,7 @@ const Login = (props) => {
 
   return (
      
-   <Form className="login-signup-forms"noValidate validated={validated} onSubmit={handleFormSubmit}>
+   <Form id="login-form" className="login-signup-forms"noValidate validated={validated} onSubmit={handleFormSubmit}>
    {/* show alert if server response is bad */}
    <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
      Something went wrong with your login!

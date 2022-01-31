@@ -159,6 +159,12 @@ Nav {
    #nav-box-main {
       margin-top: 0;
    }
+   .login-signup-forms {
+      margin-top: -150px;
+   }
+   #login-form {
+      margin-top: -250px;
+   }
 }
 @media screen and (max-width: 575px) {
    #nav-box-left {
