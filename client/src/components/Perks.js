@@ -23,8 +23,8 @@ const Perks = () => {
    return (
       <Card className="pack-card" key={item._id} style={{ width: '18rem', minWidth: '20%' }}>
       <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Text>
+        <Card.Title id="perk-title">{item.name}</Card.Title>
+        <Card.Text id="perk-description">
           {item.description}
         </Card.Text>
       </Card.Body>
