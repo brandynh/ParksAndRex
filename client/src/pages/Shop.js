@@ -4,7 +4,7 @@ import Package from "../components/Package";
 
 const Shop = () => {
   return (
-    <div className="container">
+    <div  id="shop-container">
       <div className="row justify-content-center">
         <h1>Choose One Of Our Exclusive Tour Packages</h1>
       </div>

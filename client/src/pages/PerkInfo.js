@@ -8,7 +8,7 @@ const PerksInfo = () => {
         <div className="row justify-content-center">
           <h1>Peek-A-Perk</h1>
         </div>
-        <div id="pack-wrapper" className="row justify-content-center">
+        <div className="row justify-content-center">
           <Perks />
         </div>
       </div>

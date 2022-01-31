@@ -15,7 +15,7 @@ const typeDefs = gql`
   description: String
   perks: [Perk]
   image: String
-  price: Float
+  price: String
   }
 
   type User {
