@@ -26,7 +26,7 @@ html,
 body,
 #root {
   height: 100vh;
-  filter: saturate(109%);
+  filter: saturate(109%) opacity(105%) brightness(1.00);
 }
 
 main,
