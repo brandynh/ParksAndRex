@@ -1,8 +1,7 @@
 #   🌴 PARKS & REX 🌴
 
->>>> ### **The Darkside Dino Boiz**  
->>>>> ###  *present*   <br />
->>>>>>> ###  **Parks & Rex**
+>>>>> ###  *presented by*   <br />
+>>>>>>> ###  **The Darkside Dino Boiz**  
 
 ## *DESCRIPTION* 
 
