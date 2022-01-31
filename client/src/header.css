@@ -96,11 +96,13 @@ Nav {
     margin: 0px 2px;
     letter-spacing: .5px;
     padding: 2px;
- }
- a {
     cursor: default;
     text-decoration: overline;
  }
+ /* a {
+    cursor: default;
+    text-decoration: overline;
+ } */
  a:hover {
    cursor: url(./assets/images/spear.png)15 10, move;
 }
