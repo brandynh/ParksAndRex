@@ -16,7 +16,7 @@ const Links = () => {
             </Nav.Item>
           </Link>
 
-          <Link to="/about">
+          <Link to="/aboutpage">
             <Nav.Item className="nav-item">
               <Nav.Link className="navbar-copy" href="/about">
                 About
