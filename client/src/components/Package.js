@@ -4,7 +4,7 @@ import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import {useQuery} from '@apollo/client';
 import {QUERY_PACKAGES} from '../utils/queries';
 import dinoTestImg from "../assets/images/Jurassic_park_raptors.jpg";
-import dinoPark from "..assets/images/jurassic-world-dominion-rex-1-900x506.jpg"
+import dinoPark from "../assets/images/jurassic-world-dominion-rex.jpg";
 import dinoPark2 from "../assets/images/brontosaurus-img.jpg";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART } from '../utils/actions';
