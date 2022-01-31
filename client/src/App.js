@@ -25,7 +25,8 @@ import Perks from "./pages/PerkInfo.js";
 import Thanks from "./pages/Thanks";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Linkbar from './components/Linkbar'
+import Linkbar from './components/Linkbar';
+import Jeff from './pages/Jeff';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -70,6 +71,7 @@ function App() {
                        <Route exact path="/checkout" element={<Checkout />} />
                        <Route exact path="/contact" element={<Contact />} />
                        <Route exact path="/thanks" element={<Thanks />} />
+                       <Route exact path="/jeff" element={<Jeff />} />
                      </Routes>
                     </main>
                  </div>
