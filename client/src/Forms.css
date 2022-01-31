@@ -1,21 +1,20 @@
 .form-group {
-   padding: -5px;
-   margin: 2px;
-   width: 100%;
+   margin: auto;
+   width: 275px;
 }
 
 .form-btn {
    width: 50%;
    margin: 5px 0px 2px 58px;
-   letter-spacing: .1rem;
+   letter-spacing: 1px;
 }
 .login-signup-forms {
-   margin-top: -50px;
+   margin-top: 75px;
+   position: relative;
 }
 
 #generateBtn {
    background-color:hsl(272, 39%, 70%);
-   margin-top: -30px;
    margin-left: 32px;
    letter-spacing: .1rem;
 }
