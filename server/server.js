@@ -18,7 +18,7 @@ const server = new ApolloServer({
 server.applyMiddleware({ app });
 
 // Provide middleware to express server
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // While in production mode, serve static files from the build root
