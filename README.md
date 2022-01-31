@@ -11,7 +11,6 @@
 >> Using the parks & rex e-commerce platform we have built, it has never been easier to pursue an impossible dream.
 
 ## *Table of Contents*  
-___  
 - [The User Story](#the-user-story)
 - [Features](#features)
 - [Implemented Tech](#implemented-tech)
