@@ -33,7 +33,7 @@ app.get('*', (req, res) => {
 
 // We open the database to a live express server listening at PORT
 db.once('openUri', () => {
-  app.listen(PORT, () => {
+  app.listen(process.env.PORT || PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
