@@ -8,7 +8,6 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // CSS & IMGs
-import helpImg from './assets/images/jurassic-foundation.png';
 import { StoreProvider } from "./utils/GlobalState";
 
 import "./App.css";
@@ -26,6 +25,7 @@ import Perks from "./pages/PerkInfo.js";
 import Thanks from "./pages/Thanks";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Linkbar from './components/Linkbar'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -74,9 +74,7 @@ function App() {
                     </main>
                  </div>
             <Footer />
-            <div id="linkBox" className="container d-flex justify-content-center mx-auto p-2">
-              <img id="helpImg" alt="How can you help support dinosaur research? Click here!" src={helpImg} onClick={() => {window.location = "https://www.jurassicfoundation.org/"}} />
-            </div>
+            <Linkbar id="link-container"/>
             </StoreProvider>
         </>
       </BrowserRouter>
