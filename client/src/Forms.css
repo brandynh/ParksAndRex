@@ -10,7 +10,8 @@
    letter-spacing: .1rem;
 }
 .login-signup-forms {
-   margin-top: -50px;
+   margin-top: -25px;
+   position: relative;
 }
 
 #generateBtn {
