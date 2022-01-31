@@ -59,7 +59,7 @@ function App() {
           <StoreProvider>
             <Header/>
                  <div className="background mt-5 pt-5">
-                    <main className="h-100 d-flex justify-content-center     align-items-center pt-3">
+                    <main className="h-100 d-flex justify-content-center align-items-center pt-3">
                      <Routes>
                        <Route exact path="/" element={<Home />} />
                        <Route exact path="/shop" element={<Shop />} />
