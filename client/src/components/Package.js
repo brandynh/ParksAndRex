@@ -56,7 +56,7 @@ const Package = () => {
         {item.perks.map((subitem) =>  (
 
               <Link to="/perks" class ="list-group-items" id= "packages-link">
-                <ul>
+                <ul class="perk-list">
                 <li key={subitem.id} id="packages-link">{subitem.name}</li>
                 </ul>
               </Link>
@@ -66,7 +66,6 @@ const Package = () => {
       </Card.Body>
       <ListGroup className="list-group-flush">
         {/* <ListGroupItem>Vestibulum at eros</ListGroupItem> */}
-        <ListGroupItem className="price-bar">
         <ListGroupItem id="package-price">
             {item.price}
          </ListGroupItem>
