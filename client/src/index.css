@@ -26,6 +26,7 @@ html,
 body,
 #root {
   height: 100vh;
+  filter: saturate(109%) opacity(105%);
 }
 
 main,
@@ -161,20 +162,22 @@ Footer {
   height: 100px;
   box-shadow: -6px -8px 15px 8px slategrey;
 }
-
+#link-container {
+   max-height: 85px;
+}
 #linkBox {
-  height: 30px;
+  max-height: 85px;
 }
 
-#helpImg {
-  width: 10vh;
+.footerImg {
+  width: 70px;
   border-radius: 4px;
-  margin: auto;
   opacity: .75;
-  border-radius: 20%
+  border-radius: 20%;
+  padding: 3px;
 }
 
-#helpImg:hover {
+.footerImg:hover {
   cursor: pointer;
   transform: scale(1.05);
   opacity: .95;
