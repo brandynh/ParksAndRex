@@ -5,7 +5,7 @@
 #top-line:after {
    height: 30px;
    border-radius: 0 0 100% 100%;
-   box-shadow: 0px 12px 12px 8px slategrey
+   box-shadow: 0px 12px 10px 7px slategrey;
 }
 
 #glowBox {
