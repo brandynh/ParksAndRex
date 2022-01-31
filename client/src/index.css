@@ -152,9 +152,11 @@ Footer {
   height: 100px;
   box-shadow: -6px -8px 15px 8px slategrey;
 }
-
+#link-container {
+   max-height: 85px;
+}
 #linkBox {
-  height: 85px;
+  max-height: 85px;
 }
 
 .footerImg {
