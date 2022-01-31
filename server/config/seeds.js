@@ -58,7 +58,7 @@ db.once('open', async () => {
          description: 'The ultimate experience. With the Brontosaurus package, nothing in Parks and Rex will be out of your reach.',
          perks: [perks[0], perks[1], perks[2], perks[3], perks[4], perks[5]],
          image: 'dinoPark2',
-         price: '$99,999'
+         price: '$99,999',
       }
    ]);
 
