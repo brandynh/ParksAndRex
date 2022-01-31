@@ -2,7 +2,7 @@
 
 >>>> ### **The Darkside Dino Boiz**  
 >>>> ###  *present*   
->>>>>> **| Parks & Rex |**
+>>>>>> ###  **Parks & Rex**
 
 ## *DESCRIPTION* 
 
