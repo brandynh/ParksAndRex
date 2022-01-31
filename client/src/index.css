@@ -83,9 +83,25 @@ Link {
   text-decoration: none;
 }
 
-.homeBtn {
-  padding: 8px;
-  margin: 5px;
+#home-header {
+   margin-left: 150px;
+   width: 300px;
+ }
+.homeBtn, #book-visit, #contact-btn {
+  font-size: 20px;
+  padding: 5px 30px;
+  margin: 5px 0px 7px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 4px var(--purple);
+  border: none;
+}
+.homeBtn:hover {
+   border: solid 2px var(--purple)
+}
+.homeBtn:hover::before {
+   content: url('./assets/images/right-arrow1.png');
+   position: relative;
+   right: 10px;
 }
 
 .logo {
@@ -125,10 +141,7 @@ Link {
   height: 100vh;
   margin-bottom: 0px;
 }
-#home-header {
-  margin-left: 65px;
-  width: 300px;
-}
+
 
 /* Iterable cards on shop page displaying packages */
 .pack-card {
@@ -224,7 +237,7 @@ Footer {
 #generateBtn {
   background-color: hsl(272, 39%, 70%);
   margin-top: -30px;
-  margin-left: 40px;
+  transform: translate(-125px, -42px)
 }
 
 #shop-container {

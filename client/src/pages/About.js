@@ -20,7 +20,7 @@ const About = () => {
             </p>
             <div align="center">
             <Link to="/shop">
-            <button>Book Your Visit Now</button>
+            <button id="book-visit">Book Your Visit Now</button>
           </Link>
             </div>
           </div>
