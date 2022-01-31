@@ -18,7 +18,7 @@ const ShoppingCart = () => {
                     You Ordered: The {cartItem.name} (Good for 4 visitors on the date of your choosing)
                   </h3>
                   <p className="mb-4 pb-2">{cartItem.description}</p>
-                  <p className="mb-4 pb-2">Cost: ${cartItem.price}</p>
+                  <p className="mb-4 pb-2">Cost: {cartItem.price}</p>
                 </div>
               </div>
             </div>
