@@ -231,8 +231,6 @@ Footer {
   margin: 0;
 }
 
-.perk-card {
-  line-height: 0.5;
 #packages-title {
   color: var(--purple);
   font-size: 30px;
