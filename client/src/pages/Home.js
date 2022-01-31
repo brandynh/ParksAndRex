@@ -11,7 +11,7 @@ const Home = () => {
               dinosaur adventure safari theme park.
             </p>
             <div className="row">
-              <Link to="/about">
+              <Link to="/aboutpage">
                 <button className="homeBtn">Learn More</button>
               </Link>
               <Link to="/shop">
