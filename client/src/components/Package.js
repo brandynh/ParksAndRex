@@ -66,7 +66,6 @@ const Package = () => {
       </Card.Body>
       <ListGroup className="list-group-flush">
         {/* <ListGroupItem>Vestibulum at eros</ListGroupItem> */}
-        {/* <ListGroupItem className="price-bar"> */}
         <ListGroupItem id="package-price">
             {item.price}
          </ListGroupItem>

@@ -233,6 +233,50 @@ Footer {
 
 .perk-card {
   line-height: 0.5;
+#packages-title {
+  color: var(--purple);
+  font-size: 30px;
+  font-family: Bangers;
+  letter-spacing: 2px
+}
+#packages {
+  font-family: Sora;
+  font-size: 22px;
+}
+
+#packages-link {
+   list-style: outside;
+   font-family: Bangers;
+   font-size: 26px;
+   color: var(--dark-blue);
+   list-style-type:disc;
+   align-items: center;
+   margin-left: 100px;
+   text-indent: -140px;
+   letter-spacing: 2px   
+ }
+
+ #package-price {
+   font-size: 30px;
+ }
+
+ #package-includes {
+   color: var(--purple);
+   /* background-color: var(--dino-grey); */
+   font-size: 28px;
+   font-style:italic;
+   font-weight:600;
+ }
+
+ #package-btn {
+   align-items: center;
+   margin-top: 20px;
+   font-size: 30px;
+   font-weight:650;
+ }
+
+ .perk-card {
+  line-height: .5;
   margin-top: 10px;
   height: 200px;
 }
