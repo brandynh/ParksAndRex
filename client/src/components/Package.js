@@ -41,35 +41,40 @@ const Package = () => {
      console.log(state.cart)
 
    return (
-      <Card className="pack-card" key={item} style={{  width: '18rem', minWidth: '20%' }}>
-      <Card.Img variant="top" src={image} />
+      <Card className="pack-card" key={item}style={{ width: '22rem', minWidth: '30%' }}>
+      <Card.Img id="card-img" variant="top" src={image} />
       <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Text>
+        <Card.Title id= "packages-title">{item.name}</Card.Title>
+        <Card.Text id= "packages">
           {item.description}
         </Card.Text>
+      <ListGroup className= "list-group-flush">
+        <ListGroupItem id="package-includes">Package Includes:</ListGroupItem>
+      </ListGroup>
         
-        <Card.Text>
+        <Card.Text class="perk-card">
         {item.perks.map((subitem) => {
-                return (
+              return (
 
-                  <Link to="/perks">
-                  <p>[{subitem.name}]</p>
-                  </Link>
+              <Link to="/perks" class ="list-group-items" id= "packages-link">
+                <ul>
+                <li id="packages-link">{subitem.name}</li>
+                </ul>
+              </Link>
                 )
               })}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+        {/* <ListGroupItem>Vestibulum at eros</ListGroupItem> */}
         <ListGroupItem>
-            {`$${item.price.toFixed(2)}`}
+            {item.price}
          </ListGroupItem>
       </ListGroup>
-      <Card.Body>
+      <Card.Body id="package-btn" className="flex">
         <Card.Link href="#"></Card.Link>
         <Link to="/checkout">
-        <Card.Link href="#" onClick={() => addToCart(item)}>Buy This Package</Card.Link>
+        <Card.Link  href="#" onClick={() => addToCart(item)}>CLICK HERE TO BUY</Card.Link>
         </Link>
       </Card.Body>
     </Card>
