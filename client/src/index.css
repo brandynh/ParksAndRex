@@ -142,7 +142,11 @@ Link {
   margin-bottom: 0px;
 }
 
-
+#shop-header {
+   font-size: 42px;
+   margin-bottom: -75px;
+   margin-top: 18px;
+}
 /* Iterable cards on shop page displaying packages */
 .pack-card {
   text-align: center;
@@ -215,6 +219,7 @@ Footer {
 
 .footerImg {
   width: 70px;
+  height: 70px;
   border-radius: 4px;
   opacity: 0.75;
   border-radius: 20%;

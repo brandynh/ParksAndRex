@@ -6,7 +6,7 @@ const Shop = () => {
   return (
     <div id="shop-container">
       <div className="row justify-content-center">
-        <h1>Choose One Of Our Exclusive Tour Packages</h1>
+        <h1 id="shop-header">Choose One Of Our Exclusive Tour Packages</h1>
       </div>
       <div id="pack-wrapper" className="row justify-content-center">
         <Package />
