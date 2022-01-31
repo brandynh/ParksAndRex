@@ -41,7 +41,7 @@ const Package = () => {
      console.log(state.cart)
 
    return (
-      <Card className="pack-card" key={item}style={{ width: '22rem', minWidth: '30%' }}>
+      <Card className="pack-card" key={item._id} style={{ width: '22rem', minWidth: '30%' }}>
       <Card.Img id="card-img" variant="top" src={image} />
       <Card.Body>
         <Card.Title id= "packages-title">{item.name}</Card.Title>
@@ -52,21 +52,21 @@ const Package = () => {
         <ListGroupItem id="package-includes">Package Includes:</ListGroupItem>
       </ListGroup>
         
-        <Card.Text class="perk-card">
-        {item.perks.map((subitem) => {
-              return (
+        <Card.Text className="perk-card">
+        {item.perks.map((subitem) =>  (
 
               <Link to="/perks" class ="list-group-items" id= "packages-link">
                 <ul>
-                <li id="packages-link">{subitem.name}</li>
+                <li key={subitem.id} id="packages-link">{subitem.name}</li>
                 </ul>
               </Link>
                 )
-              })}
+              )}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
         {/* <ListGroupItem>Vestibulum at eros</ListGroupItem> */}
+        <ListGroupItem className="price-bar">
         <ListGroupItem id="package-price">
             {item.price}
          </ListGroupItem>

@@ -14,13 +14,14 @@ const Perks = () => {
 
   console.log(perks);
   
+  if (error) { console.log(new Error('Error at useQuery QUERY_PERKS'))}
 
   return (
     <>
    {perks.map((item) => {
 
    return (
-      <Card className="pack-card" key={item} style={{ width: '18rem', minWidth: '20%' }}>
+      <Card className="pack-card" key={item._id} style={{ width: '18rem', minWidth: '20%' }}>
       <Card.Body>
         <Card.Title id="perk-title">{item.name}</Card.Title>
         <Card.Text id="perk-description">
