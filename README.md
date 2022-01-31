@@ -69,7 +69,7 @@ ___
 ___  
 > ### **Live**
 >>>  *At home in the cloud* <br>
->>>>  [Parks & Rex Deployed]()
+>>>>  [Parks & Rex Deployed](https://parksandrex.herokuapp.com/)
 ___  
 ___
 ___  
