@@ -8,7 +8,7 @@
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server/config && node seeds.js",
-    "start": "concurrently \"cd server && npm run watch\" \"cd client && npm start\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
   },
   "repository": {
