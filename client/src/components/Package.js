@@ -3,9 +3,9 @@ import React from 'react';
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import {useQuery} from '@apollo/client';
 import {QUERY_PACKAGES} from '../utils/queries';
-import dinoTestImg from "../assets/images/dino-desktop-2.jpeg";
-import dinoPark from "../assets/images/dino-desktop.jpeg";
-import dinoPark2 from "../assets/images/dinosaur-desktop.jpg";
+import dinoTestImg from "../assets/images/Jurassic_park_raptors.jpg";
+import dinoPark from "..assets/images/jurassic-world-dominion-rex-1-900x506.jpg"
+import dinoPark2 from "../assets/images/brontosaurus-img.jpg";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART } from '../utils/actions';
 import { Link } from "react-router-dom"
@@ -67,7 +67,7 @@ const Package = () => {
       </Card.Body>
       <ListGroup className="list-group-flush">
         {/* <ListGroupItem>Vestibulum at eros</ListGroupItem> */}
-        <ListGroupItem>
+        <ListGroupItem id="package-price">
             {item.price}
          </ListGroupItem>
       </ListGroup>

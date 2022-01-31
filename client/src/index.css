@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -141,6 +141,16 @@ Link {
    box-shadow: 10px 8px 10px 1px slategray; 
 }
 
+#perk-title {
+  font-family: Bangers;
+  color: var(--purple);
+}
+
+#perk-description {
+  font-family: Sora;
+  font-size: 15px;
+}
+
 #pack-wrapper {
   display: flex;
   width: 100vw;
@@ -199,13 +209,20 @@ Footer {
 }
 
 #packages-link {
+  list-style: outside;
    font-family: Bangers;
-   font-size: 22px;
+   font-size: 26px;
    color: var(--dark-blue);
    list-style-type:disc;
-   justify-content: center;
-   margin-left: 20px;
-   text-indent: -50px
+   align-items: center;
+   margin-left: 100px;
+   text-indent: -140px;
+   letter-spacing: 2px
+   
+ }
+
+ #package-price {
+   font-size: 30px;
  }
 
  #package-includes {
