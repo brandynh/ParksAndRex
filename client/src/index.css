@@ -212,7 +212,7 @@ Footer {
 }
 
 #packages-link {
-  list-style: outside;
+   list-style: outside;
    font-family: Bangers;
    font-size: 26px;
    color: var(--dark-blue);
@@ -220,8 +220,7 @@ Footer {
    align-items: center;
    margin-left: 100px;
    text-indent: -140px;
-   letter-spacing: 2px
-   
+   letter-spacing: 2px   
  }
 
  #package-price {
