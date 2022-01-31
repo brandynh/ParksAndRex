@@ -1,7 +1,7 @@
 const path = require('path');
 
 // DataBase, Server, GQL Queries/Mutations, and Context State: Init & Configure
-const db = require('./config/connection');
+const db = require('./config/connection.js');
 const express = require('express');
 const app = express();
 
@@ -32,7 +32,7 @@ app.get('*', (req, res) => {
 });
 
 // We open the database to a live express server listening at PORT
-db.once('open', () => {
+db.once('openUri', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
