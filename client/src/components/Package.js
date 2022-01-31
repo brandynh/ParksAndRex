@@ -56,7 +56,7 @@ const Package = () => {
         {item.perks.map((subitem) =>  (
 
               <Link to="/perks" class ="list-group-items" id= "packages-link">
-                <ul>
+                <ul class="perk-list">
                 <li key={subitem.id} id="packages-link">{subitem.name}</li>
                 </ul>
               </Link>

@@ -97,7 +97,6 @@ const Signup = () => {
             Generate Username
          </Button>
 
-
         <Form.Group className="form-group">
           <Form.Label htmlFor='firstName'>Human Name</Form.Label>
           <FloatingLabel>
