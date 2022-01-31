@@ -10,8 +10,8 @@
 >> We five Dino Boiz have curated the premier safari experience with creatures once lost to time, and it is our pleasure to bring this experience to the worldwide public with the launch of our brand new online application. 
 >> Using the parks & rex e-commerce platform we have built, it has never been easier to pursue an impossible dream.
 
-## *Table of Contents*
-### (*Internal navigation links*)
+## *Table of Contents*  
+___  
 - [The User Story](#the-user-story)
 - [Features](#features)
 - [Implemented Tech](#implemented-tech)
