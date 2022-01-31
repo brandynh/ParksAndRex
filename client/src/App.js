@@ -74,7 +74,7 @@ function App() {
                     </main>
                  </div>
             <Footer />
-            <Linkbar id="link-container"/>
+            <Linkbar id="link-container" />
             </StoreProvider>
         </>
       </BrowserRouter>
