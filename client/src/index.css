@@ -243,19 +243,19 @@ Footer {
 }
 
 #packages-link {
-   list-style: outside;
    font-family: Bangers;
    font-size: 26px;
    color: var(--dark-blue);
-   list-style-type:disc;
+   list-style-type: none;
    align-items: center;
    margin-left: 100px;
    text-indent: -140px;
-   letter-spacing: 2px   
+   letter-spacing: 2px;
  }
 
  #package-price {
    font-size: 30px;
+   margin-top: 40px;
  }
 
  #package-includes {
@@ -270,7 +270,7 @@ Footer {
    align-items: center;
    margin-top: 20px;
    font-size: 30px;
-   font-weight:650;
+   font-weight: 650;
  }
 
  .perk-card {
@@ -278,6 +278,16 @@ Footer {
   margin-top: 10px;
   height: 200px;
 }
+
+#perk-title {
+   font-family: Bangers;
+   color: var(--purple);
+ }
+ 
+ #perk-description {
+   font-family: Sora;
+   font-size: 15px;
+ }
 
 #card-img {
   border-radius: 20px 20px 0 0;
