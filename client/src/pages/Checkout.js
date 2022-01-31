@@ -10,12 +10,12 @@ const Checkout = () => {
       <ShoppingCart />
       <div className="justify-content-center" align="center">
       <Link to="/shop">
-          <button className="homeBtn">Continue Shopping for Tour Packages</button>
+          <button className="cart-btns">Continue Shopping for Tour Packages</button>
       </Link>
       {Auth.loggedIn() ?  ( <Link to="/thanks">
-              <button>Complete Your Purchase</button>
+              <button className="cart-btns">Complete Your Purchase</button>
               </Link> )   :  ( <Link to="/login">
-              <button>You must log in to complete your purchase</button>
+              <button className="cart-btns">You must log in to complete your purchase</button>
               </Link>
             )}      
             </div>
