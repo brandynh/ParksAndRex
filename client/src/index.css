@@ -87,7 +87,7 @@ Link {
    margin-left: 150px;
    width: 300px;
  }
-.homeBtn, #book-visit, #contact-btn {
+.homeBtn, #book-visit, #contact-btn, .cart-btns {
   font-size: 20px;
   padding: 5px 30px;
   margin: 5px 0px 7px 20px;
@@ -310,6 +310,10 @@ Footer {
 #card-img {
   border-radius: 20px 20px 0 0;
   height: 30%;
+}
+
+.cart-btns {
+   flex: 0 1 100%;
 }
 
 
