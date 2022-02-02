@@ -10,12 +10,12 @@
     {
       "src": "DinoIcon149x192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "149x192"
     },
     {
       "src": "DinoIcon.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "397x512"
     }
   ],
   "start_url": "/",
