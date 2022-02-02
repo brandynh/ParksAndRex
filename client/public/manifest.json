@@ -10,8 +10,7 @@
     {
       "src": "DinoIcon149x192.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "sizes": "192x192"
     },
     {
       "src": "DinoIcon.png",
