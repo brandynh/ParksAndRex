@@ -3,15 +3,30 @@
   "name": "Parks-and-Rex",
   "icons": [
     {
-      "src": "/icons/",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/icons/Dinopaw16.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icons/Dinopaw24.ico",
+      "sizes": "24x24",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icons/Dinopaw32.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icons/Dinopaw64.ico",
+      "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
       "src": "/images/DinoIcon192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/images/DinoIcon.png",
