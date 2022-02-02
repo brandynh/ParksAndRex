@@ -1,6 +1,6 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Parks-and-Rex",
   "icons": [
     {
       "src": "Dinopaw.ico",
@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "Dinopaw.ico",
+      "src": "DinoIcon149x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "Dinopaw.ico",
+      "src": "DinoIcon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
